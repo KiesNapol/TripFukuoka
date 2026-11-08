@@ -26,6 +26,9 @@
 .scorelist{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.score{padding:13px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:12px}.score b{font-size:13px}.score strong{font:600 19px var(--serif);color:#9b7b47}.score small{display:block;color:var(--muted);font-size:10px}
 .tipgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tip{border-top:2px solid var(--gold);background:var(--card);padding:20px}.tip b{font:600 18px var(--serif);display:block;margin-bottom:7px}.tip p{font-size:12px;color:var(--muted);margin:0}
 .footer{background:var(--forest);color:#e7e8df;padding:54px 0}.footerin{display:flex;justify-content:space-between;gap:25px;align-items:end}.footer h2{font:600 36px var(--serif);margin:0}.footer p{font-size:11px;color:#c0cfc3;max-width:540px}.disclaimer{font-size:10px;color:#9eafa3;margin-top:24px}
+
+.event-place{border:0;background:none;padding:0;color:var(--ink);font:inherit;font-weight:700;text-align:left;cursor:pointer;border-bottom:1px dotted #b9a47d;line-height:1.5}.event-place:hover{color:#987344}.event-place:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.photo-modal{position:fixed;inset:0;z-index:30;background:rgba(8,20,16,.78);display:none;align-items:center;justify-content:center;padding:22px}.photo-modal.open{display:flex}.photo-dialog{position:relative;width:min(820px,100%);background:var(--card);box-shadow:0 24px 80px #0005;max-height:92vh;overflow:auto}.photo-dialog img{display:block;width:100%;max-height:62vh;object-fit:cover;background:#e8e6dc}.photo-info{padding:20px 24px 24px}.photo-info h3{font:600 28px var(--serif);margin:0 42px 7px 0}.photo-info p{margin:0;color:var(--muted);font-size:13px}.photo-close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#fffefa;color:var(--ink);font-size:23px;cursor:pointer;box-shadow:0 2px 12px #0002}.photo-credit{font-size:10px!important;margin-top:10px!important;color:#8b8b80!important}
 @media(max-width:850px){.navlinks{display:none}.hero{min-height:620px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #ffffff22}.route{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:1fr}.dayvisual{min-height:230px}.hotels{grid-template-columns:repeat(2,1fr)}.hotel:last-child{grid-column:span 2}.section{padding:62px 0}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:590px}.hero-content{padding-bottom:55px}.hero p{font-size:14px}.hero-meta{gap:18px}.section-head{display:block}.lead{margin-top:14px}.stats{border-radius:0}.stat{padding:19px}.stat strong{font-size:25px}.route{gap:8px}.route-card{padding:15px;min-height:118px}.route-card b{font-size:17px}.daybody{padding:22px 18px}.daytop{display:block}.weather{display:inline-block;margin-top:10px}.event{grid-template-columns:76px 1fr}.two{grid-template-columns:1fr}.hotels{grid-template-columns:1fr 1fr}.hotel{padding:14px}.hotel h3{font-size:16px}.scorelist{grid-template-columns:1fr}.tipgrid{grid-template-columns:1fr}.footerin{display:block}}
 </style>
@@ -114,18 +117,22 @@
 </div></section>
 </main>
 <footer class="footer"><div class="wrap footerin"><div><div class="eyebrow">06—13 December 2026</div><h2>Take the scenic route.</h2><p>Fukuoka · Itoshima · Nagasaki · Shimabara · Kumamoto · Aso · Takachiho · Beppu · Yufuin</p></div><div style="font-size:11px;color:#c0cfc3">A personal travel plan<br>Made for two travelers</div></div><div class="wrap disclaimer">ข้อมูลเวลาเดินทางเป็นกรอบวางแผน อาจเปลี่ยนตามการจราจร สภาพอากาศ เวลาเปิด–ปิด และการให้บริการจริง กรุณาตรวจสอบก่อนเดินทาง</div></footer>
+<div class="photo-modal" id="photoModal" role="dialog" aria-modal="true" aria-labelledby="photoTitle" aria-hidden="true">
+ <div class="photo-dialog"><button class="photo-close" id="photoClose" aria-label="ปิด">×</button><img id="photoImage" src="" alt=""><div class="photo-info"><h3 id="photoTitle"></h3><p id="photoDescription"></p><p class="photo-credit" id="photoCredit">ภาพตัวอย่างจากแหล่งภาพออนไลน์ · ภาพอาจแตกต่างจากสภาพจริงในวันเดินทาง</p></div></div>
+</div>
 <script>
 const days=[
 {n:"01",date:"SUN · 06 DEC",title:"Itoshima to Nagasaki",temp:"7–14°C",desc:"รับรถที่ Fukuoka Airport แล้วแวะชายฝั่ง Itoshima ก่อนเดินทางเข้าพักที่ Nagasaki",img:"https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1100&q=80",events:[
 ["07:55","ถึง Fukuoka Airport","รับสัมภาระและผ่านขั้นตอนขาเข้า"],
 ["09:00","รับรถเช่า","Suzuki Hustler ตามแผน · ตรวจสภาพรถและอุปกรณ์"],
 ["10:30–11:15","Sakurai Futamigaura","ชมเสาโทริอิริมทะเลและหินคู่ Meoto Iwa"],
-["11:15–12:00","Peach Park / Itoshima","แวะจุดพักและถ่ายภาพตามเวลาที่เหลือ"],
-["12:00–13:00","อาหารกลางวัน","ลองอาหารทะเลหรือเมนูท้องถิ่น Itoshima"],
-["13:00–17:00","ขับรถไป Nagasaki และแวะพัก","เผื่อเวลาจราจรระหว่างทาง"],
-["17:00–18:00","Check-in Cuore Nagasaki Ekimae","ฝากสัมภาระและพักก่อนออกไปช่วงค่ำ"],
+["11:15–12:00","เที่ยว Itoshima","แวะจุดชมวิวและถ่ายภาพตามเวลาที่เหลือ"],
+["12:00–12:45","อาหารกลางวัน","ลองอาหารทะเลหรือเมนูท้องถิ่น Itoshima"],
+["12:45–15:00","ขับรถไป Nagasaki","เผื่อเวลาจราจรและแวะพักระหว่างทาง"],
+["15:00–16:00","Nagasaki Peace Park","เดินชมสวนสันติภาพและอนุสาวรีย์ ใช้เวลาประมาณ 1 ชั่วโมง"],
+["16:30–17:30","Check-in Cuore Nagasaki Ekimae","ฝากสัมภาระและพักก่อนออกไปช่วงค่ำ"],
 ["19:00–20:30","Mt. Inasa Observation Platform","ชมวิวกลางคืน Nagasaki"]
-],food:["Itoshima seafood","Nagasaki Champon","Castella"],places:[["Sakurai Futamigaura",9],["Peach Park / Itoshima",7.5],["Mt. Inasa",9.5]],maps:"Sakurai Futamigaura, Itoshima;Peach Park, Itoshima;Mount Inasa, Nagasaki"},
+],food:["Itoshima seafood","Nagasaki Champon","Castella"],places:[["Sakurai Futamigaura",9],["Nagasaki Peace Park",9],["Mt. Inasa",9.5]],maps:"Sakurai Futamigaura, Itoshima;Nagasaki Peace Park;Mount Inasa, Nagasaki"},
 {n:"02",date:"MON · 07 DEC",title:"Nagasaki to Kumamoto",temp:"7–14°C",desc:"เที่ยว Dejima ช่วงเช้า เดินทางไป Shimabara แล้วข้ามทะเลด้วยเรือ Ocean Arrow รอบ 13:50",img:"https://images.unsplash.com/photo-1570459027562-4a916cc6113f?auto=format&fit=crop&w=1100&q=80",events:[
 ["07:00–08:00","อาหารเช้าและ Check-out","ออกเดินทางโดยไม่เร่งรีบ"],
 ["08:00–09:30","Dejima","ย่านประวัติศาสตร์การค้าระหว่างญี่ปุ่นกับต่างชาติ"],
@@ -190,12 +197,31 @@ const days=[
 ["08:55","Flight departure","เดินทางกลับประเทศไทย"]
 ],food:["อาหารเช้าที่สนามบิน หากมีเวลา"],places:[],maps:"Fukuoka Airport"}
 ];
+const attractionPhotos={
+ "Sakurai Futamigaura":{img:"https://a.cdn-hotels.com/gdcs/production141/d703/10bd1616-d0b7-4730-9e8a-daff2003041c.jpg",desc:"ประตูโทริอิสีขาวริมทะเลและหินคู่ Meoto Iwa สัญลักษณ์ของ Itoshima."},
+ "Nagasaki Peace Park":{img:"https://skyticket.jp/guide/wp-content/uploads/pixta_13396991_M-e1562812206234.jpg?imwidth=1200",desc:"สวนสันติภาพ Nagasaki และอนุสรณ์สถานเพื่อรำลึกถึงผู้เสียชีวิตจากเหตุการณ์ระเบิดปรมาณู."},
+ "Dejima":{img:"https://www.at-nagasaki.jp/storage/special_feature_paragraph_contents/228/responsive_images/Vi1M12fVqAbAvZ566J8J4M5sZsfwxRtkMjhokRXQ__1400_933.jpg",desc:"อาคารพ่อค้าไม้แบบดั้งเดิมบนเกาะ Dejima ซึ่งเคยเป็นศูนย์กลางการค้าระหว่างญี่ปุ่นกับชาวดัตช์."},
+ "Kumamoto Castle":{img:"https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/2c/30/df.jpg",desc:"ปราสาทคุมาโมโตะ หนึ่งในปราสาทสำคัญของญี่ปุ่น โดดเด่นด้วยกำแพงหินและตัวปราสาทสีดำ."},
+ "Takachiho Gorge":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"ช่องเขาทาคาจิโฮะที่มีหน้าผาหินสูงและน้ำตก Manai สามารถชมได้จากทางเดินหรือเรือพายเมื่อเปิดให้บริการ."},
+ "Manai Waterfall":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"น้ำตก Manai ไหลลงสู่แม่น้ำสีเขียวมรกตภายในช่องเขา Takachiho."},
+ "Mt. Inasa":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20view%20from%20Mt%20Inasa00s5.jpg?width=1600",desc:"วิวกลางคืนของเมือง Nagasaki และอ่าวจากจุดชมวิวบนภูเขา Inasa."},
+ "Daikanbo":{img:"https://cdn.jeepe.jp/uploads/public_image/image/4787/normal_bfbd23b2-8ba7-4f70-8ba2-f430d16470fe.jpg",desc:"จุดชมวิว Daikanbo มองเห็นแอ่งภูเขาไฟ Aso และแนวภูเขา Aso Five Peaks."},
+ "Kusasenri":{img:"https://cdn.jeepe.jp/uploads/public_image/image/4787/normal_bfbd23b2-8ba7-4f70-8ba2-f430d16470fe.jpg",desc:"ทุ่งหญ้า Kusasenri ที่เปิดมุมมองกว้างของภูเขาไฟ Aso."},
+ "Nanzoin":{img:"https://static.gltjp.com/glt/data/article/21000/20187/20260101_173930_f91821c7_w1920.webp",desc:"พระพุทธรูปปางไสยาสน์สำริดขนาดใหญ่ของวัด Nanzoin."},
+ "Umi Jigoku":{img:"https://cdn.guinesstravel.com/gfx/images_viaggi/2026/3220-giappone-autentico-beppu-lago-umi-jigoku.webp",desc:"บ่อน้ำพุร้อนสีฟ้าโคบอลต์ Umi Jigoku ในเมือง Beppu."}
+};
 const filters=document.getElementById('filters'),daysEl=document.getElementById('days');
 filters.innerHTML='<button class="daybtn active" data-day="all">All days</button>'+days.map(d=>`<button class="daybtn" data-day="${d.n}">Day ${d.n}</button>`).join('');
 function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
-function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>`<div class="event"><time>${e[0]}</time><div><strong>${e[1]}</strong><em>${e[2]}</em></div></div>`).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open route & places ↗</a></div></div></article>`).join('')}
+function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>{const place=Object.keys(attractionPhotos).find(k=>e[1].toLowerCase().includes(k.toLowerCase()));return `<div class="event"><time>${e[0]}</time><div>${place?`<button class="event-place" type="button" data-place="${place}">${e[1]} <span aria-hidden="true">↗</span></button>`:`<strong>${e[1]}</strong>`}<em>${e[2]}</em></div></div>`}).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open route & places ↗</a></div></div></article>`).join('')}
 filters.addEventListener('click',e=>{if(!e.target.matches('button'))return;filters.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));const v=e.target.dataset.day;document.querySelectorAll('.day').forEach(c=>c.hidden=v!=='all'&&c.dataset.card!==v)});
 renderDays();
+const photoModal=document.getElementById('photoModal'),photoImage=document.getElementById('photoImage'),photoTitle=document.getElementById('photoTitle'),photoDescription=document.getElementById('photoDescription');
+function closePhoto(){photoModal.classList.remove('open');photoModal.setAttribute('aria-hidden','true');photoImage.src='';}
+daysEl.addEventListener('click',e=>{const btn=e.target.closest('[data-place]');if(!btn)return;const place=btn.dataset.place,info=attractionPhotos[place];if(!info)return;photoTitle.textContent=place;photoDescription.textContent=info.desc;photoImage.src=info.img;photoImage.alt=place;photoModal.classList.add('open');photoModal.setAttribute('aria-hidden','false');document.getElementById('photoClose').focus();});
+document.getElementById('photoClose').addEventListener('click',closePhoto);
+photoModal.addEventListener('click',e=>{if(e.target===photoModal)closePhoto();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&photoModal.classList.contains('open'))closePhoto();});
 const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Dazaifu Tenmangu","ศาลเจ้าดาไซฟุ",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8]];
 document.getElementById('scoreslist').innerHTML=scores.map(s=>`<div class="score"><div><b>${s[0]}</b><small>${s[1]}</small></div><strong>${s[2].toFixed(1)}</strong></div>`).join('');
 </script>
