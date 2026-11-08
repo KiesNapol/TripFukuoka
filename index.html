@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10251f">
+<meta name="description" content="Premium travel guide: Fukuoka & Kyushu Road Trip, 6–13 December 2026.">
+<title>Kyushu, Slowly — Fukuoka Road Trip 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17251f;--muted:#68766e;--paper:#f5f3ed;--card:#fffefa;--forest:#183b30;--moss:#82947d;--gold:#c49a59;--line:#e6e3d9;--serif:"Playfair Display",serif;--sans:"DM Sans","Noto Sans Thai",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;color:white;padding:22px 0}.navin{display:flex;justify-content:space-between;align-items:center}.brand{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}.navlinks{display:flex;gap:24px;font-size:12px}.navlinks a{text-decoration:none;opacity:.9}
+.hero{min-height:680px;color:white;display:flex;align-items:end;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(9,25,20,.2),rgba(9,25,20,.25) 35%,rgba(9,25,20,.82)),url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=2200&q=85") center 48%/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,25,20,.38),transparent 80%);pointer-events:none}.hero-content{position:relative;z-index:1;padding:130px 0 76px;max-width:800px}.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#d8c49e;font-weight:700}.hero h1{font:600 clamp(54px,9vw,104px)/.98 var(--serif);letter-spacing:-.045em;margin:20px 0}.hero h1 span{display:block;color:#e6d7b7;font-style:italic}.hero p{max-width:560px;color:#e6e9e3;font-size:16px}.hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.hero-meta b{display:block;font-size:19px;letter-spacing:0;color:white}
+.section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8b7958;font-weight:700}.section h2{font:600 clamp(34px,5vw,52px)/1.1 var(--serif);margin:8px 0 0;letter-spacing:-.03em}.lead{max-width:500px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--forest);color:white;border-radius:4px;margin-top:-1px;position:relative;z-index:2}.stat{padding:25px 28px;border-right:1px solid #ffffff22}.stat:last-child{border:0}.stat strong{display:block;font:600 30px var(--serif)}.stat span{font-size:11px;color:#c4d0c6;letter-spacing:.08em;text-transform:uppercase}
+.route{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.route-card{background:var(--card);padding:20px;border:1px solid var(--line);min-height:130px}.route-card small{color:#9b845a;letter-spacing:.14em;font-weight:700}.route-card b{display:block;font:600 20px var(--serif);margin:9px 0 4px}.route-card span{font-size:12px;color:var(--muted)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}.daybtn{border:1px solid #d8d7cc;background:transparent;border-radius:30px;padding:9px 16px;font-size:12px;color:#536158;cursor:pointer}.daybtn.active,.daybtn:hover{background:var(--forest);border-color:var(--forest);color:white}
+.day{display:grid;grid-template-columns:310px 1fr;background:var(--card);border:1px solid var(--line);margin-bottom:18px;overflow:hidden}.day[hidden]{display:none}.dayvisual{min-height:310px;position:relative;background:#d5d8cf center/cover}.dayvisual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,28,22,.55),transparent 65%)}.daylabel{position:absolute;z-index:1;bottom:22px;left:24px;color:white}.daylabel small{font-size:10px;letter-spacing:.18em;text-transform:uppercase}.daylabel b{display:block;font:600 32px var(--serif)}.daybody{padding:27px 30px}.daytop{display:flex;justify-content:space-between;gap:15px;align-items:start}.daytop h3{font:600 26px var(--serif);margin:0}.weather{white-space:nowrap;border:1px solid var(--line);padding:6px 10px;font-size:11px;color:#6c786f}.daydesc{color:var(--muted);font-size:13px;margin:7px 0 20px}.timeline{border-left:1px solid #d8d9ce;margin-left:6px;padding-left:20px}.event{position:relative;padding:0 0 15px;display:grid;grid-template-columns:94px 1fr;gap:10px}.event:before{content:"";position:absolute;left:-25px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--gold);border:2px solid var(--card)}.event time{font-size:11px;color:#9a8052;font-weight:700}.event div{font-size:13px}.event strong{font-weight:700}.event em{display:block;color:var(--muted);font-size:11px;font-style:normal;margin-top:2px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{background:#f1f0e8;padding:5px 9px;font-size:10px;color:#536158;border-radius:2px}.daylinks{display:flex;gap:16px;margin-top:16px;font-size:11px;color:#6f7d70}.daylinks a{text-decoration:none;border-bottom:1px solid #bdc6b9}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{background:var(--card);border:1px solid var(--line);padding:28px}.panel h3{font:600 27px var(--serif);margin:0 0 18px}.foodrow{padding:13px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.foodrow:last-child{border:0}.foodrow b{font-size:13px}.foodrow span{font-size:11px;color:var(--muted);text-align:right;max-width:52%}
+.hotels{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.hotel{background:var(--card);border:1px solid var(--line);padding:19px}.hotel .date{font-size:10px;letter-spacing:.14em;color:#9a8052;font-weight:700}.hotel h3{font:600 19px/1.2 var(--serif);margin:12px 0 9px}.hotel p{font-size:11px;color:var(--muted);margin:0}.hotel .nights{margin-top:15px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;color:#64736a}
+.scorelist{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.score{padding:13px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:12px}.score b{font-size:13px}.score strong{font:600 19px var(--serif);color:#9b7b47}.score small{display:block;color:var(--muted);font-size:10px}
+.tipgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tip{border-top:2px solid var(--gold);background:var(--card);padding:20px}.tip b{font:600 18px var(--serif);display:block;margin-bottom:7px}.tip p{font-size:12px;color:var(--muted);margin:0}
+.footer{background:var(--forest);color:#e7e8df;padding:54px 0}.footerin{display:flex;justify-content:space-between;gap:25px;align-items:end}.footer h2{font:600 36px var(--serif);margin:0}.footer p{font-size:11px;color:#c0cfc3;max-width:540px}.disclaimer{font-size:10px;color:#9eafa3;margin-top:24px}
+@media(max-width:850px){.navlinks{display:none}.hero{min-height:620px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #ffffff22}.route{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:1fr}.dayvisual{min-height:230px}.hotels{grid-template-columns:repeat(2,1fr)}.hotel:last-child{grid-column:span 2}.section{padding:62px 0}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:590px}.hero-content{padding-bottom:55px}.hero p{font-size:14px}.hero-meta{gap:18px}.section-head{display:block}.lead{margin-top:14px}.stats{border-radius:0}.stat{padding:19px}.stat strong{font-size:25px}.route{gap:8px}.route-card{padding:15px;min-height:118px}.route-card b{font-size:17px}.daybody{padding:22px 18px}.daytop{display:block}.weather{display:inline-block;margin-top:10px}.event{grid-template-columns:76px 1fr}.two{grid-template-columns:1fr}.hotels{grid-template-columns:1fr 1fr}.hotel{padding:14px}.hotel h3{font-size:16px}.scorelist{grid-template-columns:1fr}.tipgrid{grid-template-columns:1fr}.footerin{display:block}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap navin"><div class="brand">KYUSHU / FIELD NOTES</div><nav class="navlinks"><a href="#itinerary">Itinerary</a><a href="#stays">Hotels</a><a href="#tastes">Food</a><a href="#guide">Travel notes</a></nav></div></header>
+<section class="hero">
+ <div class="wrap hero-content">
+  <div class="eyebrow">A winter journey through southern Japan</div>
+  <h1>Kyushu,<span>slowly.</span></h1>
+  <p>จากชายฝั่ง Itoshima สู่เมืองท่า Nagasaki ข้ามทะเลไป Kumamoto แล้วขึ้นสู่ทุ่งหญ้า Aso ก่อนปิดท้ายด้วยออนเซ็นและเมือง Fukuoka</p>
+  <div class="hero-meta"><div><b>06—13</b> DECEMBER 2026</div><div><b>08 DAYS</b> 07 NIGHTS</div><div><b>02</b> TRAVELERS</div></div>
+ </div>
+</section>
+<div class="wrap"><div class="stats"><div class="stat"><strong>8D / 7N</strong><span>Trip duration</span></div><div class="stat"><strong>5 stays</strong><span>Hotel stops</span></div><div class="stat"><strong>1 ferry</strong><span>Ocean Arrow</span></div><div class="stat"><strong>660cc</strong><span>Suzuki Hustler · planned</span></div></div></div>
+<main>
+<section class="section" id="overview"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">The journey</div><h2>One island. Many moods.</h2></div><p class="lead">เส้นทางขับรถเที่ยวคิวชู 8 วัน ตั้งแต่ทะเล เมืองประวัติศาสตร์ ภูเขาไฟ ช่องเขาอันเขียวชอุ่ม ไปจนถึงเมืองช้อปปิ้ง</p></div>
+ <div class="route">
+  <div class="route-card"><small>DAY 01</small><b>Itoshima → Nagasaki</b><span>Coastline & port city</span></div>
+  <div class="route-card"><small>DAY 02</small><b>Nagasaki → Kumamoto</b><span>Dejima & Ocean Arrow</span></div>
+  <div class="route-card"><small>DAY 03</small><b>Kumamoto → Aso</b><span>Castle town & highlands</span></div>
+  <div class="route-card"><small>DAY 04</small><b>Aso → Takachiho → Beppu</b><span>Gorge & onsen town</span></div>
+  <div class="route-card"><small>DAY 05</small><b>Beppu → Yufuin → Fukuoka</b><span>Hot springs & slow streets</span></div>
+  <div class="route-card"><small>DAY 06</small><b>Fukuoka & Dazaifu</b><span>Shrines & local culture</span></div>
+  <div class="route-card"><small>DAY 07</small><b>Fukuoka shopping</b><span>Tenjin & Hakata</span></div>
+  <div class="route-card"><small>DAY 08</small><b>Fly home</b><span>Fukuoka Airport · 08:55</span></div>
+ </div>
+</div></section>
+<section class="section" id="itinerary" style="background:#eeede6"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">Day by day</div><h2>The itinerary</h2></div><p class="lead">แตะเลือกวันเพื่อดูไทม์ไลน์ จุดแวะ อาหาร และลิงก์แผนที่ อุณหภูมิเป็นช่วงประมาณการตามฤดูกาล ไม่ใช่พยากรณ์รายวัน</p></div>
+ <div class="controls" id="filters"></div>
+ <div id="days"></div>
+</div></section>
+<section class="section" id="tastes"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">A table in every town</div><h2>What to eat</h2></div><p class="lead">เมนูท้องถิ่นที่ควรลองระหว่างทาง เลือกตามเมืองเพื่อให้แต่ละวันมีรสชาติของตัวเอง</p></div>
+ <div class="two">
+  <div class="panel"><h3>Local signatures</h3>
+   <div class="foodrow"><b>Nagasaki Champon</b><span>ราเมนเส้นหนากับผักและอาหารทะเล</span></div>
+   <div class="foodrow"><b>Sara Udon</b><span>เส้นกรอบราดหน้าสไตล์นางาซากิ</span></div>
+   <div class="foodrow"><b>Kumamoto Ramen</b><span>ราเมนกระเทียมและน้ำซุปเข้มข้น</span></div>
+   <div class="foodrow"><b>Akaushi Don</b><span>ข้าวหน้าเนื้อวัวแดงจาก Aso</span></div>
+   <div class="foodrow"><b>Chicken Nanban</b><span>ไก่ทอดซอสทาร์ทาร์จาก Miyazaki</span></div>
+   <div class="foodrow"><b>Toriten</b><span>ไก่เทมปุระขึ้นชื่อของ Oita</span></div>
+  </div>
+  <div class="panel"><h3>Fukuoka favourites</h3>
+   <div class="foodrow"><b>Hakata Ramen</b><span>ทงคตสึราเมน เส้นเล็ก</span></div>
+   <div class="foodrow"><b>Motsunabe</b><span>หม้อไฟเครื่องในวัวและผัก</span></div>
+   <div class="foodrow"><b>Mizutaki</b><span>หม้อไฟไก่สไตล์ฮากาตะ</span></div>
+   <div class="foodrow"><b>Umegae Mochi</b><span>โมจิไส้ถั่วแดงจาก Dazaifu</span></div>
+   <div class="foodrow"><b>Yufuin Pudding</b><span>พุดดิ้งและขนมหวานท้องถิ่น</span></div>
+   <div class="foodrow"><b>Amaou Strawberry</b><span>สตรอว์เบอร์รีพันธุ์ดังของ Fukuoka</span></div>
+  </div>
+ </div>
+</div></section>
+<section class="section" id="stays" style="background:#eeede6"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">Rest stops</div><h2>Where we stay</h2></div><p class="lead">โรงแรมตามแผน 7 คืน ชื่อโรงแรม Kumamoto ให้ตรวจสอบกับใบจองอีกครั้ง เพราะมีการใช้ชื่อใกล้เคียงกันในบทสนทนาก่อนหน้า</p></div>
+ <div class="hotels">
+  <article class="hotel"><div class="date">06 DEC · 1 NIGHT</div><h3>Cuore Nagasaki Ekimae</h3><p>นางาซากิ</p><div class="nights">ใกล้สถานี Nagasaki</div></article>
+  <article class="hotel"><div class="date">07 DEC · 1 NIGHT</div><h3>Hotel Premium Grids Kumamoto</h3><p>คุมาโมโตะ</p><div class="nights">ชื่อในแผนล่าสุด · ตรวจสอบใบจอง</div></article>
+  <article class="hotel"><div class="date">08 DEC · 1 NIGHT</div><h3>Super Hotel Premier Aso Kumamoto Airport</h3><p>โซน Aso / Kumamoto Airport</p><div class="nights">ฐานสำหรับเที่ยว Aso</div></article>
+  <article class="hotel"><div class="date">09 DEC · 1 NIGHT</div><h3>Super Hotel Beppu Ekimae</h3><p>เบปปุ</p><div class="nights">ใกล้สถานี Beppu</div></article>
+  <article class="hotel"><div class="date">10–12 DEC · 3 NIGHTS</div><h3>SMART PLACE iNN Hakata-Gion</h3><p>ฟุกุโอกะ</p><div class="nights">พักต่อเนื่องจนวันกลับ</div></article>
+ </div>
+</div></section>
+<section class="section" id="scores"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">Worth the stop</div><h2>Places to remember</h2></div><p class="lead">คะแนนเป็นการประเมินความน่าสนใจสำหรับทริปนี้ เต็ม 10 ไม่ใช่คะแนนรีวิวจากผู้ใช้บริการ</p></div>
+ <div class="scorelist" id="scoreslist"></div>
+</div></section>
+<section class="section" id="guide" style="background:#eeede6"><div class="wrap">
+ <div class="section-head"><div><div class="kicker">Before you go</div><h2>Field notes</h2></div><p class="lead">รายละเอียดเล็ก ๆ ที่ช่วยให้ทริปขับรถช่วงต้นฤดูหนาวราบรื่นขึ้น</p></div>
+ <div class="tipgrid">
+  <article class="tip"><b>Layer for the highlands</b><p>Fukuoka อาจเย็นสบาย แต่ Aso และ Yufuin เช้าตรู่หนาวกว่ามาก เตรียมเสื้อชั้นในกันหนาว แจ็กเก็ต และถุงมือ</p></article>
+  <article class="tip"><b>Ocean Arrow · 13:50</b><p>เผื่อเวลาไปท่าเรือ ตรวจสอบเวลาเช็กอิน เงื่อนไขนำรถเช่าขึ้นเรือ และเอกสาร/ทะเบียนรถกับผู้ให้บริการก่อนวันเดินทาง</p></article>
+  <article class="tip"><b>Takachiho boat</b><p>ควรจองล่วงหน้าและตรวจสอบสถานะเรือในวันจริง เพราะอาจงดให้บริการจากระดับน้ำหรือสภาพอากาศ</p></article>
+  <article class="tip"><b>Aso road conditions</b><p>ตรวจสอบประกาศถนนและข้อจำกัดการเข้าปล่อง Nakadake ก่อนออกเดินทาง ระวังน้ำแข็งในช่วงเช้า</p></article>
+  <article class="tip"><b>Hustler 660cc</b><p>รถ Kei Car ใช้ได้กับทริป 2 คนและสัมภาระ 2 ใบ แต่ควรขับนุ่มนวล เผื่อเวลาเมื่อขึ้นเขาและไม่เร่งแซง</p></article>
+  <article class="tip"><b>Return the rental car</b><p>แผนคืนรถที่สนามบิน Fukuoka วันที่ 10 ธ.ค. เวลา 19:00 เผื่อเวลาเติมน้ำมันและตรวจสภาพรถก่อนคืน</p></article>
+ </div>
+ <div class="panel" style="margin-top:18px"><h3>Winter temperature guide</h3><div class="scorelist">
+  <div class="score"><div><b>Fukuoka / Itoshima</b><small>อากาศเย็น ลมทะเล</small></div><strong>6–14°C</strong></div>
+  <div class="score"><div><b>Nagasaki / Kumamoto</b><small>เย็น โดยเฉพาะช่วงค่ำ</small></div><strong>4–14°C</strong></div>
+  <div class="score"><div><b>Aso / Yufuin</b><small>หนาวมากในช่วงเช้า</small></div><strong>0–11°C</strong></div>
+  <div class="score"><div><b>Takachiho / Beppu</b><small>เย็นถึงหนาว</small></div><strong>2–13°C</strong></div>
+ </div><p class="disclaimer" style="color:#7d887f">ช่วงอุณหภูมิเป็นค่าประมาณเพื่อเตรียมเสื้อผ้าจากสภาพอากาศตามฤดูกาล ไม่ใช่พยากรณ์อากาศวันที่ 6–13 ธันวาคม 2026</p></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap footerin"><div><div class="eyebrow">06—13 December 2026</div><h2>Take the scenic route.</h2><p>Fukuoka · Itoshima · Nagasaki · Shimabara · Kumamoto · Aso · Takachiho · Beppu · Yufuin</p></div><div style="font-size:11px;color:#c0cfc3">A personal travel plan<br>Made for two travelers</div></div><div class="wrap disclaimer">ข้อมูลเวลาเดินทางเป็นกรอบวางแผน อาจเปลี่ยนตามการจราจร สภาพอากาศ เวลาเปิด–ปิด และการให้บริการจริง กรุณาตรวจสอบก่อนเดินทาง</div></footer>
+<script>
+const days=[
+{n:"01",date:"SUN · 06 DEC",title:"Itoshima to Nagasaki",temp:"7–14°C",desc:"รับรถที่ Fukuoka Airport แล้วแวะชายฝั่ง Itoshima ก่อนเดินทางเข้าพักที่ Nagasaki",img:"https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1100&q=80",events:[
+["07:55","ถึง Fukuoka Airport","รับสัมภาระและผ่านขั้นตอนขาเข้า"],
+["09:00","รับรถเช่า","Suzuki Hustler ตามแผน · ตรวจสภาพรถและอุปกรณ์"],
+["10:30–11:15","Sakurai Futamigaura","ชมเสาโทริอิริมทะเลและหินคู่ Meoto Iwa"],
+["11:15–12:00","Peach Park / Itoshima","แวะจุดพักและถ่ายภาพตามเวลาที่เหลือ"],
+["12:00–13:00","อาหารกลางวัน","ลองอาหารทะเลหรือเมนูท้องถิ่น Itoshima"],
+["13:00–17:00","ขับรถไป Nagasaki และแวะพัก","เผื่อเวลาจราจรระหว่างทาง"],
+["17:00–18:00","Check-in Cuore Nagasaki Ekimae","ฝากสัมภาระและพักก่อนออกไปช่วงค่ำ"],
+["19:00–20:30","Mt. Inasa Observation Platform","ชมวิวกลางคืน Nagasaki"]
+],food:["Itoshima seafood","Nagasaki Champon","Castella"],places:[["Sakurai Futamigaura",9],["Peach Park / Itoshima",7.5],["Mt. Inasa",9.5]],maps:"Sakurai Futamigaura, Itoshima;Peach Park, Itoshima;Mount Inasa, Nagasaki"},
+{n:"02",date:"MON · 07 DEC",title:"Nagasaki to Kumamoto",temp:"7–14°C",desc:"เที่ยว Dejima ช่วงเช้า เดินทางไป Shimabara แล้วข้ามทะเลด้วยเรือ Ocean Arrow รอบ 13:50",img:"https://images.unsplash.com/photo-1570459027562-4a916cc6113f?auto=format&fit=crop&w=1100&q=80",events:[
+["07:00–08:00","อาหารเช้าและ Check-out","ออกเดินทางโดยไม่เร่งรีบ"],
+["08:00–09:30","Dejima","ย่านประวัติศาสตร์การค้าระหว่างญี่ปุ่นกับต่างชาติ"],
+["09:30–12:00","เดินทางไป Shimabara Port","เผื่อเวลาพักและมื้อกลางวัน"],
+["12:00–13:00","เตรียมขึ้นเรือ","เช็กอินตามเงื่อนไขผู้ให้บริการ"],
+["13:50–14:40","Ocean Arrow Ferry","Shimabara → Kumamoto"],
+["15:00–16:30","Kumamoto Castle","เที่ยวปราสาทตามเวลาที่เหลือและเวลาเปิดจริง"],
+["17:00 เป็นต้นไป","Check-in และอาหารเย็น","พักในตัวเมือง Kumamoto"]
+],food:["Nagasaki Kakuni Manju","Kumamoto Ramen","Basashi (เมนูท้องถิ่น)"],places:[["Dejima",8],["Ocean Arrow",8.5],["Kumamoto Castle",9.5]],maps:"Dejima, Nagasaki;Shimabara Port;Kumamoto Port;Kumamoto Castle"},
+{n:"03",date:"TUE · 08 DEC",title:"Kumamoto to Aso",temp:"0–10°C",desc:"ออกเดินทางสู่ที่ราบสูง Aso ให้เวลากับจุดชมวิวและทุ่งหญ้าอย่างเต็มวัน",img:"https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1100&q=80",events:[
+["07:30–08:30","อาหารเช้า / Check-out","เตรียมเสื้อกันหนาวสำหรับพื้นที่สูง"],
+["08:30–10:00","เดินทางสู่ Aso","ขับตามสภาพถนนและอากาศ"],
+["10:00–11:00","Daikanbo Viewpoint","ชมวิวแอ่งภูเขาไฟ Aso"],
+["11:00–12:00","เที่ยวบริเวณ Aso","เลือกจุดแวะตามสภาพอากาศ"],
+["12:00–13:00","อาหารกลางวัน","ลอง Akaushi Don"],
+["13:00–14:30","Kusasenri","ทุ่งหญ้ากว้างและวิวภูเขาไฟ"],
+["14:30–16:30","Aso Volcano Museum / Nakadake area","ขึ้นกับการเปิดพื้นที่และข้อจำกัดภูเขาไฟ"],
+["17:00","Check-in","Super Hotel Premier Aso Kumamoto Airport"]
+],food:["Akaushi Don","Akaushi Steak","Aso milk soft cream"],places:[["Daikanbo",9.5],["Kusasenri",9.5],["Nakadake area",9],["Aso Shrine",8]],maps:"Daikanbo Viewpoint;Kusasenri;Aso Volcano Museum;Aso Shrine"},
+{n:"04",date:"WED · 09 DEC",title:"Aso, Takachiho & Beppu",temp:"2–13°C",desc:"วันไฮไลต์ของทริป แวะ Takachiho Gorge และล่องเรือ ก่อนเดินทางต่อไป Beppu",img:"https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1100&q=80",events:[
+["07:00–08:00","อาหารเช้า / Check-out","ออกเช้าเพื่อมีเวลาเที่ยวช่องเขา"],
+["08:00–10:00","ขับรถ Aso → Takachiho","ตรวจสอบสภาพถนน"],
+["10:00–12:00","Takachiho Gorge & boat","ล่องเรือชม Manai Waterfall หากเปิดให้บริการ"],
+["12:00–13:00","อาหารกลางวัน","แนะนำ Chicken Nanban"],
+["13:00–14:00","Takachiho Shrine","เดินชมศาลเจ้าและป่าโดยรอบ"],
+["14:00–17:00","เดินทางไป Beppu","เผื่อเวลาพักระหว่างทาง"],
+["17:00 เป็นต้นไป","Check-in และพักผ่อน","Super Hotel Beppu Ekimae"]
+],food:["Miyazaki Chicken Nanban","Toriten","Bungo Beef"],places:[["Takachiho Gorge",10],["Manai Waterfall",10],["Takachiho Shrine",8.5],["Beppu",8.5]],maps:"Takachiho Gorge;Takachiho Shrine;Super Hotel Beppu Ekimae"},
+{n:"05",date:"THU · 10 DEC",title:"Beppu, Yufuin & Fukuoka",temp:"1–12°C",desc:"เก็บบรรยากาศ Beppu และ Yufuin ก่อนขับกลับ Fukuoka คืนรถที่สนามบินเวลา 19:00",img:"https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1100&q=80",events:[
+["07:30–08:30","อาหารเช้า / Check-out","เตรียมสัมภาระให้พร้อม"],
+["08:30–10:00","Beppu / Jigoku Meguri","เลือกเที่ยว Umi Jigoku หรือบ่อนรกที่สนใจ"],
+["10:00–11:00","เดินทางไป Yufuin","ขับรถตามสภาพอากาศ"],
+["11:00–12:00","Kinrin Lake","เดินชมทะเลสาบ"],
+["12:00–13:00","อาหารกลางวัน","ลอง Bungo Beef"],
+["13:00–15:30","Yunotsubo Street / Floral Village","เดินเล่น ชิมขนมและซื้อของ"],
+["15:30–18:30","ขับรถกลับ Fukuoka Airport","เผื่อจราจร เติมน้ำมันก่อนคืนรถ"],
+["19:00","คืนรถเช่า","Fukuoka Airport"]
+],food:["Toriten","Bungo Beef","Yufuin Pudding"],places:[["Umi Jigoku",8.5],["Kinrin Lake",9],["Yunotsubo Street",8.5],["Floral Village",8]],maps:"Umi Jigoku;Kinrin Lake;Yunotsubo Street;Fukuoka Airport"},
+{n:"06",date:"FRI · 11 DEC",title:"Fukuoka & Dazaifu",temp:"6–14°C",desc:"วันเที่ยวแบบไม่ใช้รถเช่า เดินทางด้วยขนส่งสาธารณะ เน้นศาลเจ้าและวัฒนธรรม",img:"https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1100&q=80",events:[
+["08:00–09:00","อาหารเช้า","เริ่มวันในเมือง"],
+["09:00–10:30","Nanzoin Temple","ชมพระพุทธไสยาสน์ทองสัมฤทธิ์"],
+["10:30–11:30","เดินทางไป Dazaifu","ใช้รถไฟ/ขนส่งสาธารณะ"],
+["11:30–12:30","Dazaifu Tenmangu","เดินชมศาลเจ้าและถนนหน้าศาล"],
+["12:30–13:30","อาหารกลางวัน","ลอง Umegae Mochi"],
+["13:30–15:00","Kyushu National Museum","ตรวจสอบเวลาเปิดและวันหยุด"],
+["15:00–17:30","กลับ Fukuoka / พักผ่อน","หากมีเวลาอาจเดินเล่น Ohori Park"],
+["18:00 เป็นต้นไป","อาหารเย็น","Hakata ramen หรือ Motsunabe"]
+],food:["Umegae Mochi","Hakata Udon","Motsunabe"],places:[["Nanzoin",9],["Dazaifu Tenmangu",9],["Kyushu National Museum",8.5],["Ohori Park",8]],maps:"Nanzoin Temple;Dazaifu Tenmangu;Kyushu National Museum;Ohori Park"},
+{n:"07",date:"SAT · 12 DEC",title:"Fukuoka Shopping Day",temp:"6–14°C",desc:"กำหนดให้เป็นวันช้อปปิ้งเท่านั้น ไม่เพิ่มทริปท่องเที่ยวอื่น เพื่อซื้อของและจัดกระเป๋า",img:"https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1100&q=80",events:[
+["09:00–10:00","อาหารเช้า","เริ่มวันสบาย ๆ"],
+["10:00–12:00","Canal City Hakata","ช้อปปิ้งและเดินดูร้านค้า"],
+["12:00–13:00","อาหารกลางวัน","Hakata ramen หรือร้านในห้าง"],
+["13:00–15:00","Tenjin / Underground Mall","แฟชั่น เครื่องสำอาง และสินค้าไลฟ์สไตล์"],
+["15:00–17:00","Hakata Station / AMU Plaza","ของฝากและสินค้าแบรนด์ญี่ปุ่น"],
+["17:00–18:30","ซื้อของฝาก / กลับโรงแรม","จัดกระเป๋าและเตรียมเดินทางกลับ"],
+["18:30 เป็นต้นไป","อาหารเย็น","มื้อสุดท้ายใน Fukuoka"]
+],food:["Hakata Ramen","Gyoza","Mentaiko","Amaou strawberry desserts"],places:[["Canal City Hakata",8.5],["Tenjin",9],["Tenjin Underground Mall",8.5],["Hakata Station / AMU Plaza",9]],maps:"Canal City Hakata;Tenjin Underground Mall;AMU Plaza Hakata"},
+{n:"08",date:"SUN · 13 DEC",title:"The journey home",temp:"6–14°C",desc:"เดินทางไปสนามบิน Fukuoka สำหรับเที่ยวบินออกเวลา 08:55",img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1100&q=80",events:[
+["05:30–06:00","Check-out","ตรวจเอกสารและสัมภาระ"],
+["06:00–06:30","เดินทางไปสนามบิน","ตรวจสอบวิธีเดินทางช่วงเช้ามืด"],
+["06:30–07:30","Check-in / โหลดกระเป๋า","เผื่อเวลาตรวจความปลอดภัย"],
+["08:55","Flight departure","เดินทางกลับประเทศไทย"]
+],food:["อาหารเช้าที่สนามบิน หากมีเวลา"],places:[],maps:"Fukuoka Airport"}
+];
+const filters=document.getElementById('filters'),daysEl=document.getElementById('days');
+filters.innerHTML='<button class="daybtn active" data-day="all">All days</button>'+days.map(d=>`<button class="daybtn" data-day="${d.n}">Day ${d.n}</button>`).join('');
+function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
+function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>`<div class="event"><time>${e[0]}</time><div><strong>${e[1]}</strong><em>${e[2]}</em></div></div>`).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open route & places ↗</a></div></div></article>`).join('')}
+filters.addEventListener('click',e=>{if(!e.target.matches('button'))return;filters.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));const v=e.target.dataset.day;document.querySelectorAll('.day').forEach(c=>c.hidden=v!=='all'&&c.dataset.card!==v)});
+renderDays();
+const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Dazaifu Tenmangu","ศาลเจ้าดาไซฟุ",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8]];
+document.getElementById('scoreslist').innerHTML=scores.map(s=>`<div class="score"><div><b>${s[0]}</b><small>${s[1]}</small></div><strong>${s[2].toFixed(1)}</strong></div>`).join('');
+</script>
+</body></html>
