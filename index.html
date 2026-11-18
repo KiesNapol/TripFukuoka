@@ -18,6 +18,10 @@
 .section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8b7958;font-weight:700}.section h2{font:600 clamp(34px,5vw,52px)/1.1 var(--serif);margin:8px 0 0;letter-spacing:-.03em}.lead{max-width:500px;color:var(--muted);font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--forest);color:white;border-radius:4px;margin-top:-1px;position:relative;z-index:2}.stat{padding:25px 28px;border-right:1px solid #ffffff22}.stat:last-child{border:0}.stat strong{display:block;font:600 30px var(--serif)}.stat span{font-size:11px;color:#c4d0c6;letter-spacing:.08em;text-transform:uppercase}
 .route{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.route-card{background:var(--card);padding:20px;border:1px solid var(--line);min-height:130px}.route-card small{color:#9b845a;letter-spacing:.14em;font-weight:700}.route-card b{display:block;font:600 20px var(--serif);margin:9px 0 4px}.route-card span{font-size:12px;color:var(--muted)}
+.map-overview{background:var(--card);border:1px solid var(--line);padding:24px;margin-top:18px;display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}.map-overview iframe{width:100%;height:300px;border:0;filter:saturate(.8)}.map-copy p{font-size:13px;color:var(--muted)}.map-cta{display:inline-block;margin-top:8px;background:var(--forest);color:white;text-decoration:none;padding:10px 15px;font-size:12px;border-radius:2px}.map-note{font-size:10px;color:var(--muted)}
+@media(max-width:850px){.map-overview{grid-template-columns:1fr}.map-overview iframe{height:260px}}
+.map-overview{background:var(--card);border:1px solid var(--line);padding:24px;margin-top:18px;display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}.map-overview iframe{width:100%;height:300px;border:0;filter:saturate(.8)}.map-copy p{font-size:13px;color:var(--muted)}.map-copy a,.daylinks a{display:inline-block}.map-cta{display:inline-block;margin-top:8px;background:var(--forest);color:white;text-decoration:none;padding:10px 15px;font-size:12px;border-radius:2px}.map-note{font-size:10px;color:var(--muted)}
+@media(max-width:850px){.map-overview{grid-template-columns:1fr}.map-overview iframe{height:260px}}
 .controls{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}.daybtn{border:1px solid #d8d7cc;background:transparent;border-radius:30px;padding:9px 16px;font-size:12px;color:#536158;cursor:pointer}.daybtn.active,.daybtn:hover{background:var(--forest);border-color:var(--forest);color:white}
 .day{display:grid;grid-template-columns:310px 1fr;background:var(--card);border:1px solid var(--line);margin-bottom:18px;overflow:hidden}.day[hidden]{display:none}.dayvisual{min-height:310px;position:relative;background:#d5d8cf center/cover}.dayvisual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,28,22,.55),transparent 65%)}.daylabel{position:absolute;z-index:1;bottom:22px;left:24px;color:white}.daylabel small{font-size:10px;letter-spacing:.18em;text-transform:uppercase}.daylabel b{display:block;font:600 32px var(--serif)}.daybody{padding:27px 30px}.daytop{display:flex;justify-content:space-between;gap:15px;align-items:start}.daytop h3{font:600 26px var(--serif);margin:0}.weather{white-space:nowrap;border:1px solid var(--line);padding:6px 10px;font-size:11px;color:#6c786f}.daydesc{color:var(--muted);font-size:13px;margin:7px 0 20px}.timeline{border-left:1px solid #d8d9ce;margin-left:6px;padding-left:20px}.event{position:relative;padding:0 0 15px;display:grid;grid-template-columns:94px 1fr;gap:10px}.event:before{content:"";position:absolute;left:-25px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--gold);border:2px solid var(--card)}.event time{font-size:11px;color:#9a8052;font-weight:700}.event div{font-size:13px}.event strong{font-weight:700}.event em{display:block;color:var(--muted);font-size:11px;font-style:normal;margin-top:2px}
 .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{background:#f1f0e8;padding:5px 9px;font-size:10px;color:#536158;border-radius:2px}.daylinks{display:flex;gap:16px;margin-top:16px;font-size:11px;color:#6f7d70}.daylinks a{text-decoration:none;border-bottom:1px solid #bdc6b9}
@@ -56,6 +60,10 @@
   <div class="route-card"><small>DAY 06</small><b>Fukuoka & Dazaifu</b><span>Shrines & local culture</span></div>
   <div class="route-card"><small>DAY 07</small><b>Marine World → Momochi → Fukuoka Tower</b><span>Seaside visit & evening shopping</span></div>
   <div class="route-card"><small>DAY 08</small><b>Fly home</b><span>Fukuoka Airport · 08:55</span></div>
+ </div>
+ <div class="map-overview">
+  <iframe title="Kyushu trip overview map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Fukuoka%2C%20Itoshima%2C%20Nagasaki%2C%20Shimabara%2C%20Kumamoto%2C%20Aso%2C%20Takachiho%2C%20Beppu%2C%20Yufuin&output=embed"></iframe>
+  <div class="map-copy"><div class="kicker">Route map</div><h3 style="font:600 27px var(--serif);margin:8px 0">Follow the Kyushu loop.</h3><p>แผนที่ภาพรวมเมืองและพื้นที่หลักของทริป ตั้งแต่ Fukuoka, Itoshima, Nagasaki, Shimabara, Kumamoto, Aso, Takachiho, Beppu และ Yufuin</p><a class="map-cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fukuoka%2C%20Itoshima%2C%20Nagasaki%2C%20Shimabara%2C%20Kumamoto%2C%20Aso%2C%20Takachiho%2C%20Beppu%2C%20Yufuin">เปิดแผนที่เส้นทางทั้งหมด ↗</a><p class="map-note">แผนที่นี้ใช้ดูตำแหน่งเมืองและจุดหมายหลัก ไม่ใช่เส้นทางขับรถนำทางแบบ turn-by-turn โดยช่วง Shimabara–Kumamoto เดินทางด้วยเรือ Ocean Arrow</p></div>
  </div>
 </div></section>
 <section class="section" id="itinerary" style="background:#eeede6"><div class="wrap">
@@ -163,24 +171,26 @@ const days=[
 ],food:["Miyazaki Chicken Nanban","Toriten","Bungo Beef"],places:[["Takachiho Gorge",10],["Manai Waterfall",10],["Takachiho Shrine",8.5],["Beppu",8.5]],maps:"Takachiho Gorge;Takachiho Shrine;Super Hotel Beppu Ekimae"},
 {n:"05",date:"THU · 10 DEC",title:"Beppu, Yufuin & Fukuoka",temp:"1–12°C",desc:"เก็บบรรยากาศ Beppu และ Yufuin ก่อนขับกลับ Fukuoka คืนรถที่สนามบินเวลา 19:00",img:"https://cdn.guinesstravel.com/gfx/images_viaggi/2026/3220-giappone-autentico-beppu-lago-umi-jigoku.webp",events:[
 ["07:30–08:30","อาหารเช้า / Check-out","เตรียมสัมภาระให้พร้อม"],
-["08:30–10:00","Beppu / Jigoku Meguri","เลือกเที่ยว Umi Jigoku หรือบ่อนรกที่สนใจ"],
+["08:30–10:00","Beppu / Jigoku Meguri","เลือกบ่อที่สนใจ เช่น Umi Jigoku และ Chinoike Jigoku",["Umi Jigoku","Chinoike Jigoku","Steam Vents"]],
 ["10:00–11:00","เดินทางไป Yufuin","ขับรถตามสภาพอากาศ"],
 ["11:00–12:00","Kinrin Lake","เดินชมทะเลสาบ"],
 ["12:00–13:00","อาหารกลางวัน","ลอง Bungo Beef"],
-["13:00–15:30","Yunotsubo Street / Floral Village","เดินเล่น ชิมขนมและซื้อของ"],
+["13:00–14:15","Yunotsubo Street","เดินเล่น ชิมขนม คาเฟ่ และเลือกซื้อของฝาก"],
+["14:15–15:30","Floral Village","แวะชมย่านร้านค้าธีมหมู่บ้านอังกฤษและถ่ายภาพ"],
 ["15:30–18:30","ขับรถกลับ Fukuoka Airport","เผื่อจราจร เติมน้ำมันก่อนคืนรถ"],
 ["19:00","คืนรถเช่า","Fukuoka Airport"]
 ],food:["Toriten","Bungo Beef","Yufuin Pudding"],places:[["Umi Jigoku",8.5],["Kinrin Lake",9],["Yunotsubo Street",8.5],["Floral Village",8]],maps:"Umi Jigoku;Kinrin Lake;Yunotsubo Street;Fukuoka Airport"},
-{n:"06",date:"FRI · 11 DEC",title:"Fukuoka & Dazaifu",temp:"6–14°C",desc:"วันเที่ยวแบบไม่ใช้รถเช่า เดินทางด้วยขนส่งสาธารณะ เน้นศาลเจ้าและวัฒนธรรม",img:"https://cdn.jeepe.jp/uploads/public_image/image/1584/normal_40eb85c6-499f-4aed-a3d6-0f8dbe52fd98.jpg",events:[
+{n:"06",date:"FRI · 11 DEC",title:"Fukuoka & Dazaifu",temp:"6–14°C",desc:"วันเที่ยวแบบไม่ใช้รถเช่า เดินทางด้วยขนส่งสาธารณะ เน้น Nanzoin และ Dazaifu — ช่วง 13:30 เลือกเพียงอย่างเดียวระหว่าง Kamado Shrine (ตัวเลือกแนะนำ) หรือ Kyushu National Museum",img:"https://cdn.jeepe.jp/uploads/public_image/image/1584/normal_40eb85c6-499f-4aed-a3d6-0f8dbe52fd98.jpg",events:[
 ["08:00–09:00","อาหารเช้า","เริ่มวันในเมือง"],
 ["09:00–10:30","Nanzoin Temple","ชมพระพุทธไสยาสน์ทองสัมฤทธิ์"],
 ["10:30–11:30","เดินทางไป Dazaifu","ใช้รถไฟ/ขนส่งสาธารณะ"],
 ["11:30–12:30","Dazaifu Tenmangu","เดินชมศาลเจ้าและถนนหน้าศาล"],
 ["12:30–13:30","อาหารกลางวัน","ลอง Umegae Mochi"],
-["13:30–15:00","Kyushu National Museum","ตรวจสอบเวลาเปิดและวันหยุด"],
-["15:00–17:30","กลับ Fukuoka / พักผ่อน","หากมีเวลาอาจเดินเล่น Ohori Park"],
+["13:30–15:00","Kamado Shrine (ตัวเลือก)","ตัวเลือกที่แนะนำแทนพิพิธภัณฑ์ · ใช้เวลาเดินทางเพิ่มและควรตรวจสอบรอบรถบัส"],
+["13:30–15:00","Kyushu National Museum (ตัวเลือก)","เลือกพิพิธภัณฑ์แทน Kamado Shrine หากต้องการเที่ยวในย่าน Dazaifu โดยไม่เดินทางเพิ่ม"],
+["15:00–17:30","กลับ Fukuoka / พักผ่อน","เลือกแวะ Ohori Park หากเวลากลับจาก Dazaifu เอื้ออำนวย"],
 ["18:00 เป็นต้นไป","อาหารเย็น","Hakata ramen หรือ Motsunabe"]
-],food:["Umegae Mochi","Hakata Udon","Motsunabe"],places:[["Nanzoin",9],["Dazaifu Tenmangu",9],["Kyushu National Museum",8.5],["Ohori Park",8]],maps:"Nanzoin Temple;Dazaifu Tenmangu;Kyushu National Museum;Ohori Park"},
+],food:["Umegae Mochi","Hakata Udon","Motsunabe"],places:[["Nanzoin",9],["Dazaifu Tenmangu",9],["Kyushu National Museum",8.5],["Ohori Park",8]],maps:"Nanzoin Temple;Dazaifu Tenmangu;Kamado Shrine;Kyushu National Museum;Ohori Park"},
 {n:"07",date:"SAT · 12 DEC",title:"Marine World, Momochi & Shopping",temp:"6–14°C",desc:"เริ่มวันด้วย Marine World Uminonakamichi ต่อด้วยชายหาด Momochi และ Fukuoka Tower ก่อนใช้ช่วงบ่ายถึงค่ำช้อปปิ้งในเมือง",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Seaside%20Momochi%20Seaside%20Park%20Fukuoka%20Tower%20and%20Marizon%20at%20sunset%20Sawara-ku%20Fukuoka%2020240116.jpg?width=1600",events:[
 ["08:00–09:00","อาหารเช้า / เดินทางไป Uminonakamichi","ออกจากโรงแรมแต่เช้า เผื่อเวลาเดินทางด้วยรถไฟหรือรถบัส"],
 ["09:00–11:30","Marine World Uminonakamichi","ชมอควาเรียมและโซนสัตว์ทะเล ตรวจสอบรอบโชว์และเวลาเปิดก่อนเดินทาง"],
@@ -222,12 +232,19 @@ const attractionPhotos={
  "Canal City Hakata":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Canal%20City%20Hakata.jpg?width=1600",desc:"Canal City Hakata ศูนย์การค้าและความบันเทิงขนาดใหญ่ในย่าน Hakata."},
  "Tenjin":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Tenjin%20Nishi-dori%20Street%2020150604.JPG?width=1600",desc:"ย่าน Tenjin ศูนย์กลางช้อปปิ้งและร้านค้าของ Fukuoka."},
  "Tenjin Underground Mall":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Tenjin%20Nishi-dori%20Street%2020150604.JPG?width=1600",desc:"Tenjin Chikagai ทางเดินช้อปปิ้งใต้ดินที่เชื่อมต่อสถานีและห้างในย่าน Tenjin."},
- "Hakata Station / AMU Plaza":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Hakata%20Station.JPG?width=1600",desc:"สถานี Hakata และอาคาร JR Hakata City ซึ่งเป็นแหล่งช้อปปิ้งสำคัญ."}
+ "Hakata Station / AMU Plaza":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Hakata%20Station.JPG?width=1600",desc:"สถานี Hakata และอาคาร JR Hakata City ซึ่งเป็นแหล่งช้อปปิ้งสำคัญ."},
+  "Aso Volcano Museum / Nakadake area":{img:"https://japanrailandtravel.com/wp-content/uploads/2020/04/202004ki1601-1080x717.jpg",desc:"ปล่องภูเขาไฟ Nakadake ในแอ่งภูเขาไฟ Aso — การเข้าถึงปล่องขึ้นกับประกาศความปลอดภัยและสภาพก๊าซในวันเดินทาง."},
+  "Nakadake area":{img:"https://japanrailandtravel.com/wp-content/uploads/2020/04/202004ki1601-1080x717.jpg",desc:"ภูเขาไฟ Nakadake เป็นพื้นที่ภูเขาไฟที่ยังคุกรุ่น ควรตรวจสอบประกาศจำกัดการเข้าพื้นที่ก่อนเดินทาง."},
+  "Yunotsubo Street":{img:"https://komc.visit-kyushu.com/assets/photo/9/large/20e317a8f87e905c35c8b196be233ed6.jpg",desc:"ถนน Yunotsubo Kaido ใน Yufuin เต็มไปด้วยร้านขนม คาเฟ่ และร้านของฝาก."},
+  "Floral Village":{img:"https://komc.visit-kyushu.com/assets/photo/9/large/1e3ffd35c19ad970111645298a4ec7a3.jpg",desc:"Yufuin Floral Village ย่านร้านค้าและอาคารสไตล์หมู่บ้านอังกฤษขนาดเล็ก."},
+  "Kamado Shrine":{img:"https://www.crossroadfukuoka.jp/storage/special_feature_paragraphs/2176/responsive_images/c6TXI3slqhmVtpxe7DJSb8mM4mhhV5EXTGVOwXyG__1400_933.jpg",desc:"Homangu Kamado Shrine ตั้งอยู่เชิงเขา Mt. Homan รายล้อมด้วยธรรมชาติและเป็นตัวเลือกแทนพิพิธภัณฑ์ในวันเที่ยว Dazaifu."},
+  "Chinoike Jigoku":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Chinoike-jigoku01n4272.jpg?width=1600",desc:"Chinoike Jigoku หรือบ่อนรกสีแดงใน Beppu หนึ่งในบ่อน้ำพุร้อนชื่อดังของย่าน Kannawa."},
+  "Steam Vents":{img:"https://sukima.com/85_beppu/16yama06.jpg",desc:"ไอน้ำจากแหล่งน้ำพุร้อนใต้พิภพในเมือง Beppu เป็นภาพบรรยากาศของย่าน Jigoku Meguri."}
 };
 const filters=document.getElementById('filters'),daysEl=document.getElementById('days');
 filters.innerHTML='<button class="daybtn active" data-day="all">All days</button>'+days.map(d=>`<button class="daybtn" data-day="${d.n}">Day ${d.n}</button>`).join('');
 function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
-function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>{const place=Object.keys(attractionPhotos).find(k=>e[1].toLowerCase().includes(k.toLowerCase()));return `<div class="event"><time>${e[0]}</time><div>${place?`<button class="event-place" type="button" data-place="${place}">${e[1]} <span aria-hidden="true">↗</span></button>`:`<strong>${e[1]}</strong>`}<em>${e[2]}</em></div></div>`}).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open route & places ↗</a></div></div></article>`).join('')}
+function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>{const places=e[3]||[Object.keys(attractionPhotos).find(k=>e[1].toLowerCase().includes(k.toLowerCase()))].filter(Boolean);return `<div class="event"><time>${e[0]}</time><div>${places.length?places.map(place=>`<button class="event-place" type="button" data-place="${place}">${place} <span aria-hidden="true">↗</span></button>`).join(' · '):`<strong>${e[1]}</strong>`}<em>${e[2]}</em></div></div>`}).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open stops in Google Maps ↗</a></div></div></article>`).join('')}
 filters.addEventListener('click',e=>{if(!e.target.matches('button'))return;filters.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));const v=e.target.dataset.day;document.querySelectorAll('.day').forEach(c=>c.hidden=v!=='all'&&c.dataset.card!==v)});
 renderDays();
 const photoModal=document.getElementById('photoModal'),photoImage=document.getElementById('photoImage'),photoTitle=document.getElementById('photoTitle'),photoDescription=document.getElementById('photoDescription');
@@ -236,7 +253,7 @@ daysEl.addEventListener('click',e=>{const btn=e.target.closest('[data-place]');i
 document.getElementById('photoClose').addEventListener('click',closePhoto);
 photoModal.addEventListener('click',e=>{if(e.target===photoModal)closePhoto();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&photoModal.classList.contains('open'))closePhoto();});
-const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Dazaifu Tenmangu","ศาลเจ้าดาไซฟุ",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8]];
+const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Dazaifu Tenmangu","ศาลเจ้าดาไซฟุ",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8],["Kamado Shrine","ศาลเจ้าเชิงเขา Dazaifu · ตัวเลือก",8.5]];
 document.getElementById('scoreslist').innerHTML=scores.map(s=>`<div class="score"><div><b>${s[0]}</b><small>${s[1]}</small></div><strong>${s[2].toFixed(1)}</strong></div>`).join('');
 </script>
 </body></html>
