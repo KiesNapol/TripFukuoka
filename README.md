@@ -6,4 +6,4 @@
 3. Import the folder/repository into Vercel, or use Vercel's deploy flow.
 4. No build command or framework preset is required for this static HTML site.
 
-Daily route diagrams are schematic stop sequences; each stop opens a Google Maps search. Days 6–7 use public transport. Check current transport schedules and attraction operations before travel.
+Daily route maps use a responsive stop-card grid (3 columns on desktop, 2 on most phones, 1 on very narrow screens). Each stop opens a Google Maps search. Days 6–7 use public transport. Check current transport schedules and attraction operations before travel.

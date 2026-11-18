@@ -36,18 +36,19 @@
 @media(max-width:850px){.navlinks{display:none}.hero{min-height:620px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #ffffff22}.route{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:1fr}.dayvisual{min-height:230px}.hotels{grid-template-columns:repeat(2,1fr)}.hotel:last-child{grid-column:span 2}.section{padding:62px 0}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:590px}.hero-content{padding-bottom:55px}.hero p{font-size:14px}.hero-meta{gap:18px}.section-head{display:block}.lead{margin-top:14px}.stats{border-radius:0}.stat{padding:19px}.stat strong{font-size:25px}.route{gap:8px}.route-card{padding:15px;min-height:118px}.route-card b{font-size:17px}.daybody{padding:22px 18px}.daytop{display:block}.weather{display:inline-block;margin-top:10px}.event{grid-template-columns:76px 1fr}.two{grid-template-columns:1fr}.hotels{grid-template-columns:1fr 1fr}.hotel{padding:14px}.hotel h3{font-size:16px}.scorelist{grid-template-columns:1fr}.tipgrid{grid-template-columns:1fr}.footerin{display:block}}
 
-.day-route{margin-top:20px;padding:16px 16px 14px;background:#f3f2eb;border:1px solid var(--line);border-radius:3px}
-.day-route-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.day-route{margin-top:20px;padding:18px;background:#f3f2eb;border:1px solid var(--line);border-radius:8px;min-width:0;max-width:100%;overflow:hidden;box-sizing:border-box}
+.day-route-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px 12px;margin-bottom:13px}
 .day-route-head b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--forest)}
 .day-route-head span{font-size:10px;color:var(--muted)}
-.route-stops{display:flex;align-items:stretch;gap:7px;overflow-x:auto;padding:2px 1px 10px;scrollbar-width:thin}
-.route-stop{flex:0 0 138px;min-height:70px;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:9px 10px;background:var(--card);border:1px solid #dcded4;text-decoration:none;border-radius:3px}
-.route-stop:hover{border-color:var(--moss);background:#fff}
+.route-stops{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;width:100%;min-width:0;padding:0;margin:0;overflow:visible;box-sizing:border-box}
+.route-stop{box-sizing:border-box;min-width:0;width:100%;min-height:78px;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:11px 12px;background:var(--card);border:1px solid #dcded4;text-decoration:none;border-radius:6px;overflow-wrap:anywhere;transition:border-color .18s,transform .18s}
+.route-stop:hover{border-color:var(--moss);background:#fff;transform:translateY(-1px)}
 .route-stop small{font-size:9px;color:#9b845a;font-weight:700;letter-spacing:.1em}
-.route-stop b{font-size:11px;line-height:1.35;font-weight:600}
-.route-arrow{align-self:center;flex:0 0 auto;color:#9b9e91;font-size:15px}
-.route-hint{font-size:10px;color:var(--muted);margin:2px 0 0}
-@media(max-width:600px){.day-route{padding:13px}.route-stop{flex-basis:126px}}
+.route-stop b{font-size:12px;line-height:1.4;font-weight:600;overflow-wrap:anywhere}
+.route-arrow{display:none}
+.route-hint{font-size:10px;line-height:1.5;color:var(--muted);margin:12px 0 0}
+@media(max-width:760px){.route-stops{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.day-route{padding:14px}}
+@media(max-width:360px){.route-stops{grid-template-columns:minmax(0,1fr)}.route-stop{min-height:64px;padding:10px 12px}.route-stop b{font-size:12px}}
 
 </style>
 </head>
@@ -181,7 +182,7 @@ const days=[
 ["12:00–13:00","อาหารกลางวัน","แนะนำ Chicken Nanban หรืออาหารท้องถิ่น Takachiho"],
 ["13:00–13:45","Takachiho Shrine","เดินชมศาลเจ้าและป่าโดยรอบ"],
 ["13:45–14:00","ขับรถไป Amano Iwato","ระยะทางจากตัวเมือง Takachiho ประมาณ 8–10 กม. ใช้เวลาราว 15–20 นาที"],
-["14:00–15:30","Amano Iwato Shrine & Amano Yasukawara","ชมศาลเจ้าฝั่งตะวันตก แล้วเดินเลียบแม่น้ำประมาณ 10 นาทีไปถ้ำ Amano Yasukawara เผื่อเวลาเดินกลับ"],
+["14:00–15:30","Amano Iwato Shrine & Amano Yasukawara","ชมศาลเจ้าฝั่งตะวันตก แล้วเดินเลียบแม่น้ำประมาณ 10 นาทีไปถ้ำ Amano Yasukawara เผื่อเวลาเดินกลับ",["Amano Iwato Shrine","Amano Yasukawara"]],
 ["15:30–18:00","ขับรถ Takachiho → Beppu","ระยะทางประมาณ 95–100 กม. ใช้เวลาราว 2 ชม. 30 นาทีตามข้อมูลสมาคมท่องเที่ยว Takachiho เผื่อพักและสภาพถนน"],
 ["18:00 เป็นต้นไป","Check-in และพักผ่อน","Super Hotel Beppu Ekimae"]
 ],food:["Miyazaki Chicken Nanban","Takachiho beef","Toriten","Bungo Beef"],places:[["Takachiho Gorge",10],["Manai Waterfall",10],["Takachiho Shrine",8.5],["Amano Iwato Shrine",9.5],["Amano Yasukawara",9.5],["Beppu",8.5]],maps:"Takachiho Gorge;Takachiho Shrine;Amano Iwato Shrine;Amano Yasukawara;Super Hotel Beppu Ekimae",mapStops:["Super Hotel Premier Aso Kumamoto Airport, Kumamoto, Japan","Takachiho Gorge, Takachiho, Miyazaki, Japan","Takachiho Shrine, Takachiho, Miyazaki, Japan","Amano Iwato Shrine West Main Shrine, Takachiho, Miyazaki, Japan","Amano Yasukawara, Takachiho, Miyazaki, Japan","Super Hotel Beppu Ekimae, Beppu, Oita, Japan"]},
@@ -204,7 +205,7 @@ const days=[
 ["11:30–12:30","อาหารกลางวัน","รับประทานอาหารที่ Hakata Station ก่อนเดินทางไป Fukutsu"],
 ["12:30–13:05","JR ไป Fukuma Station","ขึ้น JR Kagoshima Main Line ขบวน Rapid/Local ไป Fukuma ประมาณ 25–30 นาที"],
 ["13:10–13:40","รถบัสไป Tsuyazaki Sengen","ขึ้น Nishitetsu Bus สาย 1-1 หรือ 1-2 จาก Fukuma Station ไปลง Tsuyazaki Sengen / Nagomi-mae ใช้เวลาประมาณ 20–25 นาที (ตรวจรอบรถจริงก่อนออกเดินทาง)"],
-["13:40–14:45","Tsuyazaki Sengen","เดินชมย่านบ้านเมืองเก่าและบรรยากาศท่าเรือประมงเก่า"],
+["13:40–14:45","Tsuyazaki Sengen","เดินชมย่านบ้านเมืองเก่าและบรรยากาศท่าเรือประมงเก่า",["Tsuyazaki Sengen"]],
 ["14:45–15:15","เดินทางกลับโซน Miyajidake","ใช้ Nishitetsu Bus สาย 1-1/1-2 กลับทาง Fukuma แล้วลงป้าย Miyajidake-jinja-mae; รถมีรอบจำกัด ควรเช็กตารางขากลับล่วงหน้า หากรอรถนานให้ใช้แท็กซี่ช่วงสั้น"],
 ["15:15–17:30","Miyajidake Shrine","ชมศาลเจ้า บันไดทางเข้าที่มองลงไปเห็นทะเล และบรรยากาศช่วงพระอาทิตย์ตกประมาณ 17:10 น. (เดือนธันวาคมไม่ใช่ช่วงปรากฏการณ์ Path of Light ซึ่งมักเกิดราวเดือนกุมภาพันธ์และตุลาคม)"],
 ["17:30–18:15","กลับ Fukuoka","รถบัสไป Fukuma Station แล้วต่อ JR Kagoshima Main Line กลับ Hakata"],
@@ -238,6 +239,9 @@ const attractionPhotos={
  "Takachiho Gorge":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"ช่องเขาทาคาจิโฮะที่มีหน้าผาหินสูงและน้ำตก Manai สามารถชมได้จากทางเดินหรือเรือพายเมื่อเปิดให้บริการ."},
  "Manai Waterfall":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"น้ำตก Manai ไหลลงสู่แม่น้ำสีเขียวมรกตภายในช่องเขา Takachiho."},
  "Takachiho Shrine":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Takachiho-jinja%20Haiden.jpg?width=1600",desc:"ศาลเจ้า Takachiho Shrine ท่ามกลางป่าสนเก่าแก่ มีชื่อเสียงเรื่องเสาคู่แต่งงานและการแสดง Yokagura."},
+ "Tsuyazaki Sengen":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Tsuyazaki-sengen%2001.jpg?width=1400",desc:"ย่านบ้านพ่อค้าเก่า Tsuyazaki Sengen ในเมือง Fukutsu ซึ่งเคยรุ่งเรืองจากการค้าทางทะเลและนาเกลือ มีถนนประวัติศาสตร์ยาวประมาณ 500 เมตร."},
+ "Amano Iwato Shrine":{img:"https://res-2.cloudinary.com/jnto/image/upload/w_750%2Ch_503%2Cc_fill%2Cf_auto%2Cfl_lossy%2Cq_auto/v1508563623/miyazaki/Miyazaki1709_2.jpg",desc:"Amano Iwato Shrine ศาลเจ้าที่เกี่ยวข้องกับตำนานเทพี Amaterasu ในเขต Takachiho จังหวัด Miyazaki."},
+ "Amano Yasukawara":{img:"https://res.cloudinary.com/jnto/image/upload/w_750%2Ch_503%2Cfl_lossy%2Cf_auto/v1516505613/miyazaki/Miyazaki1709_3",desc:"ถ้ำ Amano Yasukawara ริมแม่น้ำ เดินจาก Amano Iwato Shrine ประมาณ 10 นาที มีหินกองเล็ก ๆ จำนวนมากที่ผู้มาเยือนวางไว้ตามความเชื่อ."},
  "Miyajidake Shrine":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Miyajidake%20Jinja%20Fukutsu%20Fukuoka%20Japan.jpg?width=1600",desc:"ศาลเจ้า Miyajidake ในเมือง Fukutsu มีชื่อเสียงจากเชือกชิเมนาวะขนาดใหญ่และแนวถนน Path of Light ที่ทอดตรงสู่ทะเล."},
  "Mt. Inasa":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20view%20from%20Mt%20Inasa00s5.jpg?width=1600",desc:"วิวกลางคืนของเมือง Nagasaki และอ่าวจากจุดชมวิวบนภูเขา Inasa."},
  "Daikanbo":{img:"https://cdn.jeepe.jp/uploads/public_image/image/4787/normal_bfbd23b2-8ba7-4f70-8ba2-f430d16470fe.jpg",desc:"จุดชมวิว Daikanbo มองเห็นแอ่งภูเขาไฟ Aso และแนวภูเขา Aso Five Peaks."},
