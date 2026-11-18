@@ -1,12 +1,9 @@
-# KYUSHU, SLOWLY — Vercel deployment
+# KYUSHU, SLOWLY — Fukuoka Road Trip 2026
 
-This is a static website. No build command or environment variables are required.
-
-## Deploy
+## Deploy to Vercel
 1. Extract this ZIP.
-2. Import the extracted folder into a GitHub repository, or drag the folder into Vercel's deployment flow.
-3. Framework Preset: Other.
-4. Build Command: leave empty.
-5. Output Directory: `.`
+2. Confirm `index.html` is at the project root.
+3. Import the folder/repository into Vercel, or use Vercel's deploy flow.
+4. No build command or framework preset is required for this static HTML site.
 
-The site entry point is `index.html`.
+Daily route diagrams are schematic stop sequences; each stop opens a Google Maps search. Days 6–7 use public transport. Check current transport schedules and attraction operations before travel.

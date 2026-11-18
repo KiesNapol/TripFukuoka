@@ -35,6 +35,20 @@
 .photo-modal{position:fixed;inset:0;z-index:30;background:rgba(8,20,16,.78);display:none;align-items:center;justify-content:center;padding:22px}.photo-modal.open{display:flex}.photo-dialog{position:relative;width:min(820px,100%);background:var(--card);box-shadow:0 24px 80px #0005;max-height:92vh;overflow:auto}.photo-dialog img{display:block;width:100%;max-height:62vh;object-fit:cover;background:#e8e6dc}.photo-info{padding:20px 24px 24px}.photo-info h3{font:600 28px var(--serif);margin:0 42px 7px 0}.photo-info p{margin:0;color:var(--muted);font-size:13px}.photo-close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#fffefa;color:var(--ink);font-size:23px;cursor:pointer;box-shadow:0 2px 12px #0002}.photo-credit{font-size:10px!important;margin-top:10px!important;color:#8b8b80!important}
 @media(max-width:850px){.navlinks{display:none}.hero{min-height:620px}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #ffffff22}.route{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:1fr}.dayvisual{min-height:230px}.hotels{grid-template-columns:repeat(2,1fr)}.hotel:last-child{grid-column:span 2}.section{padding:62px 0}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.hero{min-height:590px}.hero-content{padding-bottom:55px}.hero p{font-size:14px}.hero-meta{gap:18px}.section-head{display:block}.lead{margin-top:14px}.stats{border-radius:0}.stat{padding:19px}.stat strong{font-size:25px}.route{gap:8px}.route-card{padding:15px;min-height:118px}.route-card b{font-size:17px}.daybody{padding:22px 18px}.daytop{display:block}.weather{display:inline-block;margin-top:10px}.event{grid-template-columns:76px 1fr}.two{grid-template-columns:1fr}.hotels{grid-template-columns:1fr 1fr}.hotel{padding:14px}.hotel h3{font-size:16px}.scorelist{grid-template-columns:1fr}.tipgrid{grid-template-columns:1fr}.footerin{display:block}}
+
+.day-route{margin-top:20px;padding:16px 16px 14px;background:#f3f2eb;border:1px solid var(--line);border-radius:3px}
+.day-route-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.day-route-head b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--forest)}
+.day-route-head span{font-size:10px;color:var(--muted)}
+.route-stops{display:flex;align-items:stretch;gap:7px;overflow-x:auto;padding:2px 1px 10px;scrollbar-width:thin}
+.route-stop{flex:0 0 138px;min-height:70px;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:9px 10px;background:var(--card);border:1px solid #dcded4;text-decoration:none;border-radius:3px}
+.route-stop:hover{border-color:var(--moss);background:#fff}
+.route-stop small{font-size:9px;color:#9b845a;font-weight:700;letter-spacing:.1em}
+.route-stop b{font-size:11px;line-height:1.35;font-weight:600}
+.route-arrow{align-self:center;flex:0 0 auto;color:#9b9e91;font-size:15px}
+.route-hint{font-size:10px;color:var(--muted);margin:2px 0 0}
+@media(max-width:600px){.day-route{padding:13px}.route-stop{flex-basis:126px}}
+
 </style>
 </head>
 <body>
@@ -57,7 +71,7 @@
   <div class="route-card"><small>DAY 03</small><b>Kumamoto → Aso</b><span>Castle town & highlands</span></div>
   <div class="route-card"><small>DAY 04</small><b>Aso → Takachiho → Beppu</b><span>Gorge & onsen town</span></div>
   <div class="route-card"><small>DAY 05</small><b>Beppu → Yufuin → Fukuoka</b><span>Hot springs & slow streets</span></div>
-  <div class="route-card"><small>DAY 06</small><b>Fukuoka & Dazaifu</b><span>Shrines & local culture</span></div>
+  <div class="route-card"><small>DAY 06</small><b>Nanzoin → Miyajidake</b><span>Temple & coastal shrine</span></div>
   <div class="route-card"><small>DAY 07</small><b>Marine World → Momochi → Fukuoka Tower</b><span>Seaside visit & evening shopping</span></div>
   <div class="route-card"><small>DAY 08</small><b>Fly home</b><span>Fukuoka Airport · 08:55</span></div>
  </div>
@@ -140,7 +154,7 @@ const days=[
 ["15:00–16:00","Nagasaki Peace Park","เดินชมสวนสันติภาพและอนุสาวรีย์ ใช้เวลาประมาณ 1 ชั่วโมง"],
 ["16:30–17:30","Check-in Cuore Nagasaki Ekimae","ฝากสัมภาระและพักก่อนออกไปช่วงค่ำ"],
 ["19:00–20:30","Mt. Inasa Observation Platform","ชมวิวกลางคืน Nagasaki"]
-],food:["Itoshima seafood","Nagasaki Champon","Castella"],places:[["Sakurai Futamigaura",9],["Nagasaki Peace Park",9],["Mt. Inasa",9.5]],maps:"Sakurai Futamigaura, Itoshima;Nagasaki Peace Park;Mount Inasa, Nagasaki"},
+],food:["Itoshima seafood","Nagasaki Champon","Castella"],places:[["Sakurai Futamigaura",9],["Nagasaki Peace Park",9],["Mt. Inasa",9.5]],maps:"Sakurai Futamigaura, Itoshima;Nagasaki Peace Park;Mount Inasa, Nagasaki",mapStops:["Fukuoka Airport, Fukuoka, Japan", "Sakurai Futamigaura, Itoshima, Fukuoka, Japan", "Nagasaki Peace Park, Nagasaki, Japan", "Cuore Nagasaki Ekimae, Nagasaki, Japan", "Mt. Inasa Observation Platform, Nagasaki, Japan"]},
 {n:"02",date:"MON · 07 DEC",title:"Nagasaki to Kumamoto",temp:"7–14°C",desc:"เที่ยว Dejima ช่วงเช้า เดินทางไป Shimabara แล้วข้ามทะเลด้วยเรือ Ocean Arrow รอบ 13:50",img:"https://cdn.japan-travel-note.com/images/00070/10.jpg",events:[
 ["07:00–08:00","อาหารเช้าและ Check-out","ออกเดินทางโดยไม่เร่งรีบ"],
 ["08:00–09:30","Dejima","ย่านประวัติศาสตร์การค้าระหว่างญี่ปุ่นกับต่างชาติ"],
@@ -149,7 +163,7 @@ const days=[
 ["13:50–14:40","Ocean Arrow Ferry","Shimabara → Kumamoto"],
 ["15:00–16:30","Kumamoto Castle","เที่ยวปราสาทตามเวลาที่เหลือและเวลาเปิดจริง"],
 ["17:00 เป็นต้นไป","Check-in และอาหารเย็น","พักในตัวเมือง Kumamoto"]
-],food:["Nagasaki Kakuni Manju","Kumamoto Ramen","Basashi (เมนูท้องถิ่น)"],places:[["Dejima",8],["Ocean Arrow",8.5],["Kumamoto Castle",9.5]],maps:"Dejima, Nagasaki;Shimabara Port;Kumamoto Port;Kumamoto Castle"},
+],food:["Nagasaki Kakuni Manju","Kumamoto Ramen","Basashi (เมนูท้องถิ่น)"],places:[["Dejima",8],["Ocean Arrow",8.5],["Kumamoto Castle",9.5]],maps:"Dejima, Nagasaki;Shimabara Port;Kumamoto Port;Kumamoto Castle",mapStops:["Dejima, Nagasaki, Japan", "Shimabara Port, Shimabara, Nagasaki, Japan", "Ocean Arrow Ferry, Shimabara Port to Kumamoto Port, Japan", "Kumamoto Port, Kumamoto, Japan", "Kumamoto Castle, Kumamoto, Japan", "Hotel Premium Grids Kumamoto, Kumamoto, Japan"]},
 {n:"03",date:"TUE · 08 DEC",title:"Kumamoto to Aso",temp:"0–10°C",desc:"ออกเดินทางสู่ที่ราบสูง Aso ให้เวลากับจุดชมวิวและทุ่งหญ้าอย่างเต็มวัน",img:"https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/2c/30/df.jpg",events:[
 ["07:30–08:30","อาหารเช้า / Check-out","เตรียมเสื้อกันหนาวสำหรับพื้นที่สูง"],
 ["08:30–10:00","เดินทางสู่ Aso","ขับตามสภาพถนนและอากาศ"],
@@ -159,16 +173,18 @@ const days=[
 ["13:00–14:30","Kusasenri","ทุ่งหญ้ากว้างและวิวภูเขาไฟ"],
 ["14:30–16:30","Aso Volcano Museum / Nakadake area","ขึ้นกับการเปิดพื้นที่และข้อจำกัดภูเขาไฟ"],
 ["17:00","Check-in","Super Hotel Premier Aso Kumamoto Airport"]
-],food:["Akaushi Don","Akaushi Steak","Aso milk soft cream"],places:[["Daikanbo",9.5],["Kusasenri",9.5],["Nakadake area",9],["Aso Shrine",8]],maps:"Daikanbo Viewpoint;Kusasenri;Aso Volcano Museum;Aso Shrine"},
-{n:"04",date:"WED · 09 DEC",title:"Aso, Takachiho & Beppu",temp:"2–13°C",desc:"วันไฮไลต์ของทริป แวะ Takachiho Gorge และล่องเรือ ก่อนเดินทางต่อไป Beppu",img:"https://san-tatsu.jp/assets/uploads/2024/01/30204846/1706615316-b3464f9b5f0ff41c14379b2d7487c96d.jpg",events:[
-["07:00–08:00","อาหารเช้า / Check-out","ออกเช้าเพื่อมีเวลาเที่ยวช่องเขา"],
-["08:00–10:00","ขับรถ Aso → Takachiho","ตรวจสอบสภาพถนน"],
-["10:00–12:00","Takachiho Gorge & boat","ล่องเรือชม Manai Waterfall หากเปิดให้บริการ"],
-["12:00–13:00","อาหารกลางวัน","แนะนำ Chicken Nanban"],
-["13:00–14:00","Takachiho Shrine","เดินชมศาลเจ้าและป่าโดยรอบ"],
-["14:00–17:00","เดินทางไป Beppu","เผื่อเวลาพักระหว่างทาง"],
-["17:00 เป็นต้นไป","Check-in และพักผ่อน","Super Hotel Beppu Ekimae"]
-],food:["Miyazaki Chicken Nanban","Toriten","Bungo Beef"],places:[["Takachiho Gorge",10],["Manai Waterfall",10],["Takachiho Shrine",8.5],["Beppu",8.5]],maps:"Takachiho Gorge;Takachiho Shrine;Super Hotel Beppu Ekimae"},
+],food:["Akaushi Don","Akaushi Steak","Aso milk soft cream"],places:[["Daikanbo",9.5],["Kusasenri",9.5],["Nakadake area",9],["Aso Shrine",8]],maps:"Daikanbo Viewpoint;Kusasenri;Aso Volcano Museum;Aso Shrine",mapStops:["Hotel Premium Grids Kumamoto, Kumamoto, Japan", "Daikanbo Viewpoint, Aso, Kumamoto, Japan", "Kusasenri, Aso, Kumamoto, Japan", "Aso Volcano Museum, Aso, Kumamoto, Japan", "Super Hotel Premier Aso Kumamoto Airport, Kumamoto, Japan"]},
+{n:"04",date:"WED · 09 DEC",title:"Aso, Takachiho & Beppu",temp:"2–13°C",desc:"วันไฮไลต์ของทริป เที่ยว Takachiho Gorge ล่องเรือ แวะ Takachiho Shrine และ Amano Iwato Shrine พร้อมเดินไปถ้ำ Amano Yasukawara ก่อนเดินทางเข้า Beppu",img:"https://san-tatsu.jp/assets/uploads/2024/01/30204846/1706615316-b3464f9b5f0ff41c14379b2d7487c96d.jpg",events:[
+["07:00–08:00","อาหารเช้า / Check-out","ออกเช้าจาก Aso เพื่อให้มีเวลาเที่ยว Takachiho"],
+["08:00–10:00","ขับรถ Aso → Takachiho","เผื่อเวลาตามสภาพถนนและอากาศ"],
+["10:00–12:00","Takachiho Gorge & boat","เดินชมช่องเขาและล่องเรือชม Manai Waterfall หากเปิดให้บริการ"],
+["12:00–13:00","อาหารกลางวัน","แนะนำ Chicken Nanban หรืออาหารท้องถิ่น Takachiho"],
+["13:00–13:45","Takachiho Shrine","เดินชมศาลเจ้าและป่าโดยรอบ"],
+["13:45–14:00","ขับรถไป Amano Iwato","ระยะทางจากตัวเมือง Takachiho ประมาณ 8–10 กม. ใช้เวลาราว 15–20 นาที"],
+["14:00–15:30","Amano Iwato Shrine & Amano Yasukawara","ชมศาลเจ้าฝั่งตะวันตก แล้วเดินเลียบแม่น้ำประมาณ 10 นาทีไปถ้ำ Amano Yasukawara เผื่อเวลาเดินกลับ"],
+["15:30–18:00","ขับรถ Takachiho → Beppu","ระยะทางประมาณ 95–100 กม. ใช้เวลาราว 2 ชม. 30 นาทีตามข้อมูลสมาคมท่องเที่ยว Takachiho เผื่อพักและสภาพถนน"],
+["18:00 เป็นต้นไป","Check-in และพักผ่อน","Super Hotel Beppu Ekimae"]
+],food:["Miyazaki Chicken Nanban","Takachiho beef","Toriten","Bungo Beef"],places:[["Takachiho Gorge",10],["Manai Waterfall",10],["Takachiho Shrine",8.5],["Amano Iwato Shrine",9.5],["Amano Yasukawara",9.5],["Beppu",8.5]],maps:"Takachiho Gorge;Takachiho Shrine;Amano Iwato Shrine;Amano Yasukawara;Super Hotel Beppu Ekimae",mapStops:["Super Hotel Premier Aso Kumamoto Airport, Kumamoto, Japan","Takachiho Gorge, Takachiho, Miyazaki, Japan","Takachiho Shrine, Takachiho, Miyazaki, Japan","Amano Iwato Shrine West Main Shrine, Takachiho, Miyazaki, Japan","Amano Yasukawara, Takachiho, Miyazaki, Japan","Super Hotel Beppu Ekimae, Beppu, Oita, Japan"]},
 {n:"05",date:"THU · 10 DEC",title:"Beppu, Yufuin & Fukuoka",temp:"1–12°C",desc:"เก็บบรรยากาศ Beppu และ Yufuin ก่อนขับกลับ Fukuoka คืนรถที่สนามบินเวลา 19:00",img:"https://cdn.guinesstravel.com/gfx/images_viaggi/2026/3220-giappone-autentico-beppu-lago-umi-jigoku.webp",events:[
 ["07:30–08:30","อาหารเช้า / Check-out","เตรียมสัมภาระให้พร้อม"],
 ["08:30–10:00","Beppu / Jigoku Meguri","เลือกบ่อที่สนใจ เช่น Umi Jigoku และ Chinoike Jigoku",["Umi Jigoku","Chinoike Jigoku","Steam Vents"]],
@@ -179,35 +195,40 @@ const days=[
 ["14:15–15:30","Floral Village","แวะชมย่านร้านค้าธีมหมู่บ้านอังกฤษและถ่ายภาพ"],
 ["15:30–18:30","ขับรถกลับ Fukuoka Airport","เผื่อจราจร เติมน้ำมันก่อนคืนรถ"],
 ["19:00","คืนรถเช่า","Fukuoka Airport"]
-],food:["Toriten","Bungo Beef","Yufuin Pudding"],places:[["Umi Jigoku",8.5],["Kinrin Lake",9],["Yunotsubo Street",8.5],["Floral Village",8]],maps:"Umi Jigoku;Kinrin Lake;Yunotsubo Street;Fukuoka Airport"},
-{n:"06",date:"FRI · 11 DEC",title:"Fukuoka & Dazaifu",temp:"6–14°C",desc:"วันเที่ยวแบบไม่ใช้รถเช่า เดินทางด้วยขนส่งสาธารณะ เน้น Nanzoin และ Dazaifu — ช่วง 13:30 เลือกเพียงอย่างเดียวระหว่าง Kamado Shrine (ตัวเลือกแนะนำ) หรือ Kyushu National Museum",img:"https://cdn.jeepe.jp/uploads/public_image/image/1584/normal_40eb85c6-499f-4aed-a3d6-0f8dbe52fd98.jpg",events:[
-["08:00–09:00","อาหารเช้า","เริ่มวันในเมือง"],
-["09:00–10:30","Nanzoin Temple","ชมพระพุทธไสยาสน์ทองสัมฤทธิ์"],
-["10:30–11:30","เดินทางไป Dazaifu","ใช้รถไฟ/ขนส่งสาธารณะ"],
-["11:30–12:30","Dazaifu Tenmangu","เดินชมศาลเจ้าและถนนหน้าศาล"],
-["12:30–13:30","อาหารกลางวัน","ลอง Umegae Mochi"],
-["13:30–15:00","Kamado Shrine (ตัวเลือก)","ตัวเลือกที่แนะนำแทนพิพิธภัณฑ์ · ใช้เวลาเดินทางเพิ่มและควรตรวจสอบรอบรถบัส"],
-["13:30–15:00","Kyushu National Museum (ตัวเลือก)","เลือกพิพิธภัณฑ์แทน Kamado Shrine หากต้องการเที่ยวในย่าน Dazaifu โดยไม่เดินทางเพิ่ม"],
-["15:00–17:30","กลับ Fukuoka / พักผ่อน","เลือกแวะ Ohori Park หากเวลากลับจาก Dazaifu เอื้ออำนวย"],
-["18:00 เป็นต้นไป","อาหารเย็น","Hakata ramen หรือ Motsunabe"]
-],food:["Umegae Mochi","Hakata Udon","Motsunabe"],places:[["Nanzoin",9],["Dazaifu Tenmangu",9],["Kyushu National Museum",8.5],["Ohori Park",8]],maps:"Nanzoin Temple;Dazaifu Tenmangu;Kamado Shrine;Kyushu National Museum;Ohori Park"},
-{n:"07",date:"SAT · 12 DEC",title:"Marine World, Momochi & Shopping",temp:"6–14°C",desc:"เริ่มวันด้วย Marine World Uminonakamichi ต่อด้วยชายหาด Momochi และ Fukuoka Tower ก่อนใช้ช่วงบ่ายถึงค่ำช้อปปิ้งในเมือง",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Seaside%20Momochi%20Seaside%20Park%20Fukuoka%20Tower%20and%20Marizon%20at%20sunset%20Sawara-ku%20Fukuoka%2020240116.jpg?width=1600",events:[
-["08:00–09:00","อาหารเช้า / เดินทางไป Uminonakamichi","ออกจากโรงแรมแต่เช้า เผื่อเวลาเดินทางด้วยรถไฟหรือรถบัส"],
-["09:00–11:30","Marine World Uminonakamichi","ชมอควาเรียมและโซนสัตว์ทะเล ตรวจสอบรอบโชว์และเวลาเปิดก่อนเดินทาง"],
-["11:30–12:15","เดินทางไป Momochi","เดินทางกลับฝั่งเมืองและมุ่งหน้า Seaside Momochi"],
-["12:15–13:15","Momochi Seaside Park / Marizon","เดินเล่นริมทะเล ถ่ายภาพ Fukuoka Tower และ Marizon"],
-["13:15–14:30","Fukuoka Tower","ขึ้นจุดชมวิวหากเวลาและคิวเอื้ออำนวย"],
-["14:30–15:00","เดินทางเข้า Tenjin","เริ่มช่วงช้อปปิ้งในเมือง"],
-["15:00–17:30","Tenjin / Underground Mall","แฟชั่น เครื่องสำอาง และสินค้าไลฟ์สไตล์"],
-["17:30–19:00","Canal City Hakata","ช้อปปิ้งต่อและรับประทานอาหารเย็น"],
-["19:00–20:00","Hakata Station / AMU Plaza","ซื้อของฝากและกลับโรงแรม"]
-],food:["Hakata Ramen","Gyoza","Mentaiko","Amaou strawberry desserts"],places:[["Marine World Uminonakamichi",9],["Momochi Seaside Park",9],["Fukuoka Tower",9],["Tenjin",9],["Canal City Hakata",8.5]],maps:"Marine World Uminonakamichi;Seaside Momochi Park;Fukuoka Tower;Tenjin Underground Mall;Canal City Hakata;AMU Plaza Hakata"},
+],food:["Toriten","Bungo Beef","Yufuin Pudding"],places:[["Umi Jigoku",8.5],["Kinrin Lake",9],["Yunotsubo Street",8.5],["Floral Village",8]],maps:"Umi Jigoku;Kinrin Lake;Yunotsubo Street;Fukuoka Airport",mapStops:["Super Hotel Beppu Ekimae, Beppu, Oita, Japan", "Umi Jigoku, Beppu, Oita, Japan", "Chinoike Jigoku, Beppu, Oita, Japan", "Kinrin Lake, Yufuin, Oita, Japan", "Yunotsubo Kaido, Yufuin, Oita, Japan", "Yufuin Floral Village, Yufuin, Oita, Japan", "Fukuoka Airport, Fukuoka, Japan"]},
+{n:"06",date:"FRI · 11 DEC",title:"Nanzoin, Tsuyazaki & Miyajidake",temp:"6–14°C",desc:"วันเที่ยวแบบไม่ใช้รถยนต์ เดินทางด้วย JR และ Nishitetsu Bus เที่ยวเมืองเก่า Tsuyazaki ก่อนปิดท้าย Miyajidake Shrine ช่วงพระอาทิตย์ตก",img:"https://cdn.jeepe.jp/uploads/public_image/image/1584/normal_40eb85c6-499f-4aed-a3d6-0f8dbe52fd98.jpg",events:[
+["08:00–08:30","เดินทางจากโรงแรมไป Hakata Station","เดินจาก SMART PLACE iNN Hakata-Gion ไปสถานี Hakata หรือใช้ Subway จาก Gion 1 สถานี"],
+["08:30–09:00","JR ไป Nanzoin","ขึ้น JR Fukuhoku Yutaka Line (Sasaguri Line) จาก Hakata ไป Kido-Nanzoin-mae ประมาณ 20 นาทีด้วยรถด่วน แล้วเดินต่อประมาณ 3 นาที"],
+["09:00–10:45","Nanzoin Temple","ชมพระพุทธไสยาสน์ทองสัมฤทธิ์และบริเวณวัด"],
+["10:45–11:30","กลับ Hakata","JR จาก Kido-Nanzoin-mae กลับ Hakata"],
+["11:30–12:30","อาหารกลางวัน","รับประทานอาหารที่ Hakata Station ก่อนเดินทางไป Fukutsu"],
+["12:30–13:05","JR ไป Fukuma Station","ขึ้น JR Kagoshima Main Line ขบวน Rapid/Local ไป Fukuma ประมาณ 25–30 นาที"],
+["13:10–13:40","รถบัสไป Tsuyazaki Sengen","ขึ้น Nishitetsu Bus สาย 1-1 หรือ 1-2 จาก Fukuma Station ไปลง Tsuyazaki Sengen / Nagomi-mae ใช้เวลาประมาณ 20–25 นาที (ตรวจรอบรถจริงก่อนออกเดินทาง)"],
+["13:40–14:45","Tsuyazaki Sengen","เดินชมย่านบ้านเมืองเก่าและบรรยากาศท่าเรือประมงเก่า"],
+["14:45–15:15","เดินทางกลับโซน Miyajidake","ใช้ Nishitetsu Bus สาย 1-1/1-2 กลับทาง Fukuma แล้วลงป้าย Miyajidake-jinja-mae; รถมีรอบจำกัด ควรเช็กตารางขากลับล่วงหน้า หากรอรถนานให้ใช้แท็กซี่ช่วงสั้น"],
+["15:15–17:30","Miyajidake Shrine","ชมศาลเจ้า บันไดทางเข้าที่มองลงไปเห็นทะเล และบรรยากาศช่วงพระอาทิตย์ตกประมาณ 17:10 น. (เดือนธันวาคมไม่ใช่ช่วงปรากฏการณ์ Path of Light ซึ่งมักเกิดราวเดือนกุมภาพันธ์และตุลาคม)"],
+["17:30–18:15","กลับ Fukuoka","รถบัสไป Fukuma Station แล้วต่อ JR Kagoshima Main Line กลับ Hakata"],
+["18:30 เป็นต้นไป","อาหารเย็น","กลับย่าน Hakata / Gion รับประทาน Hakata ramen หรือ Motsunabe"]
+],food:["Hakata Udon","Motsunabe","Fukutsu seafood"],places:[["Nanzoin",9],["Tsuyazaki Sengen",8.5],["Miyajidake Shrine",9.5]],maps:"Nanzoin Temple;Tsuyazaki Sengen;Miyajidake Shrine",mapStops:["SMART PLACE iNN Hakata-Gion, Fukuoka, Japan","Hakata Station, Fukuoka, Japan","Kido-Nanzoin-mae Station, Sasaguri, Fukuoka, Japan","Nanzoin Temple, Sasaguri, Fukuoka, Japan","Fukuma Station, Fukutsu, Fukuoka, Japan","Tsuyazaki Sengen Nagomi, Fukutsu, Fukuoka, Japan","Miyajidake Shrine, Fukutsu, Fukuoka, Japan","Fukuma Station, Fukutsu, Fukuoka, Japan","Hakata Station, Fukuoka, Japan"]},
+{n:"07",date:"SAT · 12 DEC",title:"Marine World, Momochi & Shopping",temp:"6–14°C",desc:"วันสุดท้ายเต็มวันในฟุกุโอกะโดยไม่ใช้รถยนต์: นั่ง JR ไป Marine World ตอนเช้า ต่อรถไฟและรถบัสไป Momochi ช่วงเที่ยง แล้วช้อปปิ้งในเมืองช่วงบ่ายถึงค่ำ",img:"https://commons.wikimedia.org/wiki/Special:FilePath/Seaside%20Momochi%20Seaside%20Park%20Fukuoka%20Tower%20and%20Marizon%20at%20sunset%20Sawara-ku%20Fukuoka%2020240116.jpg?width=1600",events:[
+["08:30–09:30","เดินทางไป Marine World","เดินไป Hakata Station แล้วขึ้น JR Kagoshima Main Line ไป Kashii Station (ประมาณ 11 นาที) เปลี่ยนเป็น JR Kashii Line ไป Uminonakamichi Station (ประมาณ 20 นาที) จากนั้นเดิน 5 นาที"],
+["10:00–12:00","Marine World Uminonakamichi","เปิดช่วงฤดูหนาวโดยทั่วไป 10:00–17:00 ชม.อควาเรียมและรอบโชว์ ตรวจสอบตารางโชว์ของวันที่ไป"],
+["12:00–13:00","เดินทางกลับ Hakata","JR Kashii Line จาก Uminonakamichi ไป Kashii แล้วต่อ JR Kagoshima Main Line กลับ Hakata"],
+["13:00–13:40","รถบัสไป Momochi","ขึ้น Nishitetsu Bus จาก Hakata Bus Terminal ไปลง Fukuoka Tower South Exit ใช้เวลาประมาณ 30 นาที รวมเวลาเดินและรอรถ"],
+["13:40–14:30","อาหารกลางวัน Momochi / Marizon","รับประทานอาหารและเดินเล่นริมทะเล"],
+["14:30–15:30","Momochi Seaside Park / Marizon","เดินเล่นชายหาด ถ่ายภาพวิวอ่าวและอาคาร Marizon"],
+["15:30–16:30","Fukuoka Tower","ขึ้นจุดชมวิวหากคิวและเวลาเอื้ออำนวย"],
+["16:30–17:00","เดินทางเข้า Tenjin","รถบัสจากป้าย Fukuoka Tower South Exit ไป Tenjin หรือเดินทางผ่าน Nishijin"],
+["17:00–18:30","Tenjin / Underground Mall","ช้อปปิ้งแฟชั่น เครื่องสำอาง และสินค้าไลฟ์สไตล์"],
+["18:30–19:30","Canal City Hakata","นั่งรถบัสหรือ Subway กลับย่าน Hakata แวะ Canal City และรับประทานอาหารเย็น"],
+["19:30–20:00","Hakata Station / AMU Plaza","ซื้อของฝากและกลับโรงแรม"]
+],food:["Hakata Ramen","Gyoza","Mentaiko","Amaou strawberry desserts"],places:[["Marine World Uminonakamichi",9],["Momochi Seaside Park",9],["Fukuoka Tower",9],["Tenjin",9],["Canal City Hakata",8.5]],maps:"Marine World Uminonakamichi;Seaside Momochi Park;Fukuoka Tower;Tenjin Underground Mall;Canal City Hakata;AMU Plaza Hakata",mapStops:["SMART PLACE iNN Hakata-Gion, Fukuoka, Japan","Hakata Station, Fukuoka, Japan","Kashii Station, Fukuoka, Japan","Uminonakamichi Station, Fukuoka, Japan","Marine World Uminonakamichi, Fukuoka, Japan","Kashii Station, Fukuoka, Japan","Hakata Station, Fukuoka, Japan","Fukuoka Tower South Exit Bus Stop, Fukuoka, Japan","Seaside Momochi Beach Park, Fukuoka, Japan","Fukuoka Tower, Fukuoka, Japan","Tenjin Underground Shopping Mall, Fukuoka, Japan","Canal City Hakata, Fukuoka, Japan","JR Hakata City AMU Plaza, Fukuoka, Japan"]},
 {n:"08",date:"SUN · 13 DEC",title:"The journey home",temp:"6–14°C",desc:"เดินทางไปสนามบิน Fukuoka สำหรับเที่ยวบินออกเวลา 08:55",img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1100&q=80",events:[
 ["05:30–06:00","Check-out","ตรวจเอกสารและสัมภาระ"],
 ["06:00–06:30","เดินทางไปสนามบิน","ตรวจสอบวิธีเดินทางช่วงเช้ามืด"],
 ["06:30–07:30","Check-in / โหลดกระเป๋า","เผื่อเวลาตรวจความปลอดภัย"],
 ["08:55","Flight departure","เดินทางกลับประเทศไทย"]
-],food:["อาหารเช้าที่สนามบิน หากมีเวลา"],places:[],maps:"Fukuoka Airport"}
+],food:["อาหารเช้าที่สนามบิน หากมีเวลา"],places:[],maps:"Fukuoka Airport",mapStops:["SMART PLACE iNN Hakata-Gion, Fukuoka, Japan", "Fukuoka Airport, Fukuoka, Japan"]}
 ];
 const attractionPhotos={
  "Sakurai Futamigaura":{img:"https://a.cdn-hotels.com/gdcs/production141/d703/10bd1616-d0b7-4730-9e8a-daff2003041c.jpg",desc:"ประตูโทริอิสีขาวริมทะเลและหินคู่ Meoto Iwa สัญลักษณ์ของ Itoshima."},
@@ -216,14 +237,14 @@ const attractionPhotos={
  "Kumamoto Castle":{img:"https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0e/2c/30/df.jpg",desc:"ปราสาทคุมาโมโตะ หนึ่งในปราสาทสำคัญของญี่ปุ่น โดดเด่นด้วยกำแพงหินและตัวปราสาทสีดำ."},
  "Takachiho Gorge":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"ช่องเขาทาคาจิโฮะที่มีหน้าผาหินสูงและน้ำตก Manai สามารถชมได้จากทางเดินหรือเรือพายเมื่อเปิดให้บริการ."},
  "Manai Waterfall":{img:"https://assets.sparkle.travel/place/takachiho-kyoo-manai-no-taki/gb6ce4/large.jpg",desc:"น้ำตก Manai ไหลลงสู่แม่น้ำสีเขียวมรกตภายในช่องเขา Takachiho."},
+ "Takachiho Shrine":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Takachiho-jinja%20Haiden.jpg?width=1600",desc:"ศาลเจ้า Takachiho Shrine ท่ามกลางป่าสนเก่าแก่ มีชื่อเสียงเรื่องเสาคู่แต่งงานและการแสดง Yokagura."},
+ "Miyajidake Shrine":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Miyajidake%20Jinja%20Fukutsu%20Fukuoka%20Japan.jpg?width=1600",desc:"ศาลเจ้า Miyajidake ในเมือง Fukutsu มีชื่อเสียงจากเชือกชิเมนาวะขนาดใหญ่และแนวถนน Path of Light ที่ทอดตรงสู่ทะเล."},
  "Mt. Inasa":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20view%20from%20Mt%20Inasa00s5.jpg?width=1600",desc:"วิวกลางคืนของเมือง Nagasaki และอ่าวจากจุดชมวิวบนภูเขา Inasa."},
  "Daikanbo":{img:"https://cdn.jeepe.jp/uploads/public_image/image/4787/normal_bfbd23b2-8ba7-4f70-8ba2-f430d16470fe.jpg",desc:"จุดชมวิว Daikanbo มองเห็นแอ่งภูเขาไฟ Aso และแนวภูเขา Aso Five Peaks."},
  "Kusasenri":{img:"https://cdn.jeepe.jp/uploads/public_image/image/4787/normal_bfbd23b2-8ba7-4f70-8ba2-f430d16470fe.jpg",desc:"ทุ่งหญ้า Kusasenri ที่เปิดมุมมองกว้างของภูเขาไฟ Aso."},
  "Nanzoin":{img:"https://static.gltjp.com/glt/data/article/21000/20187/20260101_173930_f91821c7_w1920.webp",desc:"พระพุทธรูปปางไสยาสน์สำริดขนาดใหญ่ของวัด Nanzoin."},
  "Umi Jigoku":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Umi-jigoku01n3200.jpg?width=1600",desc:"บ่อน้ำพุร้อนสีฟ้าโคบอลต์ Umi Jigoku ในเมือง Beppu."},
  "Kinrin Lake":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Kinrin.JPG?width=1600",desc:"ทะเลสาบ Kinrin ใน Yufuin ซึ่งมีไอน้ำลอยเหนือผิวน้ำในช่วงอากาศเย็น."},
- "Dazaifu Tenmangu":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/DazaifuTenmangu.jpg?width=1600",desc:"ศาลเจ้า Dazaifu Tenmangu ศูนย์กลางการสักการะเทพแห่งการศึกษา."},
- "Kyushu National Museum":{img:"https://www.crossroadfukuoka.jp/en/photo/390",desc:"พิพิธภัณฑ์แห่งชาติคิวชูใน Dazaifu จัดแสดงประวัติศาสตร์และวัฒนธรรมของญี่ปุ่น."},
  "Ohori Park":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Ohori%20Park%2C%20Fukuoka.JPG?width=1600",desc:"สวน Ohori Park และทะเลสาบขนาดใหญ่ใจกลางเมือง Fukuoka."},
  "Marine World Uminonakamichi":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Marine%20World%20from%20Uminonakamichi%20Seaside%20Park.jpg?width=1600",desc:"Marine World Uminonakamichi อควาเรียมริมทะเลทางตอนเหนือของ Fukuoka."},
  "Momochi Seaside Park":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Seaside%20Momochi%20Seaside%20Park%20Fukuoka%20Tower%20and%20Marizon%20at%20sunset%20Sawara-ku%20Fukuoka%2020240116.jpg?width=1600",desc:"ชายหาด Seaside Momochi มองเห็น Fukuoka Tower และอาคาร Marizon ริมทะเล."},
@@ -237,14 +258,13 @@ const attractionPhotos={
   "Nakadake area":{img:"https://japanrailandtravel.com/wp-content/uploads/2020/04/202004ki1601-1080x717.jpg",desc:"ภูเขาไฟ Nakadake เป็นพื้นที่ภูเขาไฟที่ยังคุกรุ่น ควรตรวจสอบประกาศจำกัดการเข้าพื้นที่ก่อนเดินทาง."},
   "Yunotsubo Street":{img:"https://komc.visit-kyushu.com/assets/photo/9/large/20e317a8f87e905c35c8b196be233ed6.jpg",desc:"ถนน Yunotsubo Kaido ใน Yufuin เต็มไปด้วยร้านขนม คาเฟ่ และร้านของฝาก."},
   "Floral Village":{img:"https://komc.visit-kyushu.com/assets/photo/9/large/1e3ffd35c19ad970111645298a4ec7a3.jpg",desc:"Yufuin Floral Village ย่านร้านค้าและอาคารสไตล์หมู่บ้านอังกฤษขนาดเล็ก."},
-  "Kamado Shrine":{img:"https://www.crossroadfukuoka.jp/storage/special_feature_paragraphs/2176/responsive_images/c6TXI3slqhmVtpxe7DJSb8mM4mhhV5EXTGVOwXyG__1400_933.jpg",desc:"Homangu Kamado Shrine ตั้งอยู่เชิงเขา Mt. Homan รายล้อมด้วยธรรมชาติและเป็นตัวเลือกแทนพิพิธภัณฑ์ในวันเที่ยว Dazaifu."},
-  "Chinoike Jigoku":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Chinoike-jigoku01n4272.jpg?width=1600",desc:"Chinoike Jigoku หรือบ่อนรกสีแดงใน Beppu หนึ่งในบ่อน้ำพุร้อนชื่อดังของย่าน Kannawa."},
+   "Chinoike Jigoku":{img:"https://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Chinoike-jigoku01n4272.jpg?width=1600",desc:"Chinoike Jigoku หรือบ่อนรกสีแดงใน Beppu หนึ่งในบ่อน้ำพุร้อนชื่อดังของย่าน Kannawa."},
   "Steam Vents":{img:"https://sukima.com/85_beppu/16yama06.jpg",desc:"ไอน้ำจากแหล่งน้ำพุร้อนใต้พิภพในเมือง Beppu เป็นภาพบรรยากาศของย่าน Jigoku Meguri."}
 };
 const filters=document.getElementById('filters'),daysEl=document.getElementById('days');
 filters.innerHTML='<button class="daybtn active" data-day="all">All days</button>'+days.map(d=>`<button class="daybtn" data-day="${d.n}">Day ${d.n}</button>`).join('');
 function mapUrl(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
-function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>{const places=e[3]||[Object.keys(attractionPhotos).find(k=>e[1].toLowerCase().includes(k.toLowerCase()))].filter(Boolean);return `<div class="event"><time>${e[0]}</time><div>${places.length?places.map(place=>`<button class="event-place" type="button" data-place="${place}">${place} <span aria-hidden="true">↗</span></button>`).join(' · '):`<strong>${e[1]}</strong>`}<em>${e[2]}</em></div></div>`}).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="daylinks"><a target="_blank" rel="noopener" href="${mapUrl(d.maps)}">Open stops in Google Maps ↗</a></div></div></article>`).join('')}
+function renderDays(){daysEl.innerHTML=days.map(d=>`<article class="day" data-card="${d.n}"><div class="dayvisual" style="background-image:url('${d.img}')"><div class="daylabel"><small>${d.date}</small><b>DAY ${d.n}</b></div></div><div class="daybody"><div class="daytop"><h3>${d.title}</h3><span class="weather">☼ ${d.temp}</span></div><p class="daydesc">${d.desc}</p><div class="timeline">${d.events.map(e=>{const places=e[3]||[Object.keys(attractionPhotos).find(k=>e[1].toLowerCase().includes(k.toLowerCase()))].filter(Boolean);return `<div class="event"><time>${e[0]}</time><div>${places.length?places.map(place=>`<button class="event-place" type="button" data-place="${place}">${place} <span aria-hidden="true">↗</span></button>`).join(' · '):`<strong>${e[1]}</strong>`}<em>${e[2]}</em></div></div>`}).join('')}</div><div class="tags">${d.food.map(f=>`<span class="tag">Taste · ${f}</span>`).join('')}</div><div class="day-route"><div class="day-route-head"><b>Daily route map</b><span>แตะชื่อสถานที่เพื่อเปิด Google Maps</span></div><div class="route-stops">${d.mapStops.map((stop,i)=>`<a class="route-stop" target="_blank" rel="noopener" href="${mapUrl(stop)}"><small>STOP ${String(i+1).padStart(2,"0")}</small><b>${stop.split(",")[0]}</b></a>${i<d.mapStops.length-1?`<span class="route-arrow" aria-hidden="true">→</span>`:""}`).join("")}</div><p class="route-hint">แผนผังนี้แสดงลำดับการแวะโดยสังเขป ไม่ใช่แผนที่ตามสัดส่วนหรือการนำทางจริง · ตรวจสอบเส้นทางและเวลาเดินทางใน Google Maps อีกครั้ง</p></div></div></article>`).join('')}
 filters.addEventListener('click',e=>{if(!e.target.matches('button'))return;filters.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));const v=e.target.dataset.day;document.querySelectorAll('.day').forEach(c=>c.hidden=v!=='all'&&c.dataset.card!==v)});
 renderDays();
 const photoModal=document.getElementById('photoModal'),photoImage=document.getElementById('photoImage'),photoTitle=document.getElementById('photoTitle'),photoDescription=document.getElementById('photoDescription');
@@ -253,7 +273,7 @@ daysEl.addEventListener('click',e=>{const btn=e.target.closest('[data-place]');i
 document.getElementById('photoClose').addEventListener('click',closePhoto);
 photoModal.addEventListener('click',e=>{if(e.target===photoModal)closePhoto();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&photoModal.classList.contains('open'))closePhoto();});
-const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Dazaifu Tenmangu","ศาลเจ้าดาไซฟุ",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8],["Kamado Shrine","ศาลเจ้าเชิงเขา Dazaifu · ตัวเลือก",8.5]];
+const scores=[["Takachiho Gorge","ช่องเขาและน้ำตก",10],["Manai Waterfall","น้ำตกในช่องเขา",10],["Daikanbo","จุดชมวิว Aso",9.5],["Kusasenri","ทุ่งหญ้า Aso",9.5],["Mt. Inasa","วิวกลางคืน Nagasaki",9.5],["Kumamoto Castle","ปราสาทคุมาโมโตะ",9.5],["Sakurai Futamigaura","ชายฝั่ง Itoshima",9],["Kinrin Lake","ทะเลสาบ Yufuin",9],["Nanzoin","วัดและพระนอน",9],["Yunotsubo Street","ถนนเดินเล่น Yufuin",8.5],["Dejima","ย่านประวัติศาสตร์",8],["Miyajidake Shrine","ศาลเจ้าและ Path of Light",9.5]];
 document.getElementById('scoreslist').innerHTML=scores.map(s=>`<div class="score"><div><b>${s[0]}</b><small>${s[1]}</small></div><strong>${s[2].toFixed(1)}</strong></div>`).join('');
 </script>
 </body></html>
